@@ -4,7 +4,18 @@
 
 export const environment = {
   production: false,
-
+  urlAdh: 'http://localhost:8888/adherent/adhMap',
+  urlAdr: 'http://localhost:8888/adresse/adrMap',
+  urlAg: 'http://localhost:8888/agentBM/agMap',
+  urlArt: 'http://localhost:8888/article/artMap',
+  urlCas: 'http://localhost:8888/casier/casMap',
+  urlCat: 'http://localhost:8888/categorie/catMap',
+  urlIden: 'http://localhost:8888/identite/ideMap',
+  urlLiv: 'http://localhost:8888/livre/livMap',
+  urlPan: 'http://localhost:8888/panier/panMap',
+  urlRes: 'http://localhost:8888/reservation/resMap',
+  urlSm: 'http://localhost:8888/sm/smMap',
+  urlVis: 'http://localhost:8888/visiteur/visMap'
 };
 
 /*
