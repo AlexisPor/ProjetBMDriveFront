@@ -8,12 +8,12 @@ import { Visiteur } from 'src/app/models/visiteur/visiteur.model';
 })
 export class VisiteurService {
 
-  private urlVis: 'http://localhost:8888/visMap'
+  urlVis: 'http://localhost:8888/visiteur/visMap';
 
   constructor(private http: HttpClient) { }
 
   public findAllVisiteur(): Observable<Visiteur[]>{
-    return this.http.get<Visiteur[]>(this.urlVis);
+    return this.http.get<Visiteur[]>('http://localhost:8888/visiteur/visMap');
   };
 
   public addVisiteur(vis: Visiteur): Observable<Visiteur[]>{
