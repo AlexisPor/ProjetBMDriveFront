@@ -2,33 +2,32 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Reservation } from 'src/app/models/reservation/reservation.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReservationService {
 
-  private urlRes: 'http://localhost:8888/resMap'
-
   constructor(private http: HttpClient) { }
 
   public findAllReservation(): Observable<Reservation[]>{
-    return this.http.get<Reservation[]>(this.urlRes);
+    return this.http.get<Reservation[]>(environment.urlRes);
   };
 
   public addReservation(res: Reservation): Observable<Reservation[]>{
-    return this.http.post<Reservation[]>(this.urlRes , res);
+    return this.http.post<Reservation[]>(environment.urlRes , res);
   };
 
   public updateReservation(id: number): Observable<Object>{
-    return this.http.put(this.urlRes , id);
+    return this.http.put(environment.urlRes , id);
   };
 
   public deleteReservation(id: number, res: Reservation): Observable<Object>{
-    return this.http.delete(this.urlRes + id + res );
+    return this.http.delete(environment.urlRes + id + res );
   };
 
   public findReservationById(id: number): Observable<Reservation>{
-    return this.http.get<Reservation>(this.urlRes + id);
+    return this.http.get<Reservation>(environment.urlRes + id);
   };
 }

@@ -17,19 +17,8 @@ export class ListVisiteurComponent implements OnInit {
   constructor(private visiteurServ: VisiteurService) { }
 
   ngOnInit(): void {
-    this.findAllVisiteur();
   }
 
-  findAllVisiteur() {
-    this.visiteurServ.findAllVisiteur().subscribe(
-      (response) => {
-        this.visiteur=response;
 
-      },
-      (error) => {
-        console.log(`error ${{error}}`);
+  }
 
-      }
-      );
-  };
-}
