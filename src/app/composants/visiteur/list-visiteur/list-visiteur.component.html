@@ -1,1 +1,30 @@
-<p>list-visiteur works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+{{ visiteur | json }}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id Visiteur</th>
+        <th scope="col">Identité</th>
+        <th scope="col">Panier</th>
+        <th>Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vis of visiteur">
+        <th scope="row">1</th>
+        <td>{{vis.visIdVisiteur}}</td>
+        <td>{{vis.TIdentite.idePrenom}}</td>
+        <td>{{vis.TPanier.TArticle}}</td>
+        <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>
+</html>

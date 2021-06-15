@@ -2,7 +2,7 @@ import { Adresse } from "../adresse/adresse.model";
 
 export class Identite {
 
-  public ideIdentite: number;
+  public ideId: number;
   public TAdresse: Adresse = new Adresse();
   public ideNom: string;
   public idePrenom: string;
