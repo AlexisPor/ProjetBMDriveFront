@@ -4,5 +4,5 @@ export class Categorie {
 
   public catId: number;
   public TArticle: Article = new Article();
-  public carLibelle: string;
+  public catLibelle: string;
 }
