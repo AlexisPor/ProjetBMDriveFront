@@ -12,18 +12,12 @@ import { UpdateAdherentComponent } from './composants/adherent/update-adherent/u
 import { AddAgentbmComponent } from './composants/agentBM/add-agentbm/add-agentbm.component';
 import { ListAgentbmComponent } from './composants/agentBM/list-agentbm/list-agentbm.component';
 import { UpdateAgentbmComponent } from './composants/agentBM/update-agentbm/update-agentbm.component';
-import { AddArticleComponent } from './composants/article/add-article/add-article.component';
-import { ListArticleComponent } from './composants/article/list-article/list-article.component';
-import { UpdateArticleComponent } from './composants/article/update-article/update-article.component';
 import { AddCasierComponent } from './composants/casier/add-casier/add-casier.component';
 import { ListCasierComponent } from './composants/casier/list-casier/list-casier.component';
 import { UpdateCasierComponent } from './composants/casier/update-casier/update-casier.component';
 import { AddCategorieComponent } from './composants/categorie/add-categorie/add-categorie.component';
 import { ListCategorieComponent } from './composants/categorie/list-categorie/list-categorie.component';
 import { UpdateCategorieComponent } from './composants/categorie/update-categorie/update-categorie.component';
-import { AddIdentiteComponent } from './composants/identite/add-identite/add-identite.component';
-import { ListIdentiteComponent } from './composants/identite/list-identite/list-identite.component';
-import { UpdateIdentiteComponent } from './composants/identite/update-identite/update-identite.component';
 import { AddLivreComponent } from './composants/livre/add-livre/add-livre.component';
 import { ListLivreComponent } from './composants/livre/list-livre/list-livre.component';
 import { UpdateLivreComponent } from './composants/livre/update-livre/update-livre.component';
@@ -51,18 +45,12 @@ import { MenuComponent } from './menu/menu/menu.component';
     AddAgentbmComponent,
     ListAgentbmComponent,
     UpdateAgentbmComponent,
-    AddArticleComponent,
-    ListArticleComponent,
-    UpdateArticleComponent,
     AddCasierComponent,
     ListCasierComponent,
     UpdateCasierComponent,
     AddCategorieComponent,
     ListCategorieComponent,
     UpdateCategorieComponent,
-    AddIdentiteComponent,
-    ListIdentiteComponent,
-    UpdateIdentiteComponent,
     AddLivreComponent,
     ListLivreComponent,
     UpdateLivreComponent,
@@ -86,7 +74,8 @@ import { MenuComponent } from './menu/menu/menu.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
