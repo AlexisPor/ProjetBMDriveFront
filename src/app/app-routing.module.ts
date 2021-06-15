@@ -6,18 +6,12 @@ import { UpdateAdherentComponent } from './composants/adherent/update-adherent/u
 import { AddAgentbmComponent } from './composants/agentBM/add-agentbm/add-agentbm.component';
 import { ListAgentbmComponent } from './composants/agentBM/list-agentbm/list-agentbm.component';
 import { UpdateAgentbmComponent } from './composants/agentBM/update-agentbm/update-agentbm.component';
-import { AddArticleComponent } from './composants/article/add-article/add-article.component';
-import { ListArticleComponent } from './composants/article/list-article/list-article.component';
-import { UpdateArticleComponent } from './composants/article/update-article/update-article.component';
 import { AddCasierComponent } from './composants/casier/add-casier/add-casier.component';
 import { ListCasierComponent } from './composants/casier/list-casier/list-casier.component';
 import { UpdateCasierComponent } from './composants/casier/update-casier/update-casier.component';
 import { AddCategorieComponent } from './composants/categorie/add-categorie/add-categorie.component';
 import { ListCategorieComponent } from './composants/categorie/list-categorie/list-categorie.component';
 import { UpdateCategorieComponent } from './composants/categorie/update-categorie/update-categorie.component';
-import { AddIdentiteComponent } from './composants/identite/add-identite/add-identite.component';
-import { ListIdentiteComponent } from './composants/identite/list-identite/list-identite.component';
-import { UpdateIdentiteComponent } from './composants/identite/update-identite/update-identite.component';
 import { AddLivreComponent } from './composants/livre/add-livre/add-livre.component';
 import { ListLivreComponent } from './composants/livre/list-livre/list-livre.component';
 import { UpdateLivreComponent } from './composants/livre/update-livre/update-livre.component';
@@ -43,10 +37,6 @@ const routes: Routes = [
   {path: "list-agent", component: ListAgentbmComponent },
   {path: "update-agent", component: UpdateAgentbmComponent },
 
-  {path: "add-article", component: AddArticleComponent },
-  {path: "list-article", component: ListArticleComponent },
-  {path: "update-article", component: UpdateArticleComponent },
-
   {path: "add-casier", component: AddCasierComponent },
   {path: "list-casier", component: ListCasierComponent },
   {path: "update-casier", component: UpdateCasierComponent },
@@ -54,10 +44,6 @@ const routes: Routes = [
   {path: "add-categorie", component: AddCategorieComponent },
   {path: "list-categorie", component: ListCategorieComponent },
   {path: "update-categorie", component: UpdateCategorieComponent },
-
-  {path: "add-identite", component: AddIdentiteComponent },
-  {path: "list-identite", component: ListIdentiteComponent },
-  {path: "update-identite", component: UpdateIdentiteComponent },
 
   {path: "add-livre", component: AddLivreComponent },
   {path: "list-livre", component: ListLivreComponent },
