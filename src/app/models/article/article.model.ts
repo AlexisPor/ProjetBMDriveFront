@@ -1,11 +1,5 @@
 export class Article {
-
-<<<<<<< HEAD
-=======
-
- 
-
->>>>>>> master
+  
   public artId:number;
   public artCote: string;
   public artTitre: string;
