@@ -16,7 +16,7 @@ export class PanierService {
   };
 
   public addPanier(pan: Panier): Observable<Panier[]>{
-    return this.http.post<Panier[]>(environment.urlPan , pan);
+    return this.http.post<Panier[]>(environment.urlPan, pan);
   };
 
   public updatePanier(id: number): Observable<Object>{
