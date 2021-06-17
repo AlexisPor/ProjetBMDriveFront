@@ -4,6 +4,6 @@ import { Reservation } from "../reservation/reservation.model";
 export class Panier {
 
   public panId: number;
-  public TArticle: Article= new Article();
-  public TReservation: Reservation = new Reservation();
+  public bmdArticle: Article= new Article();
+  public bmdReservation: Reservation = new Reservation();
 }
