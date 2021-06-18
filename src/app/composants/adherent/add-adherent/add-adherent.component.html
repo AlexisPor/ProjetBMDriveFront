@@ -28,10 +28,51 @@
           <input class="form-control" type="text" formControlName="ideNom">
         </div>
         <div class="form-group">
-          <label for="ideNom">Prénom : </label>
-          <input class="form-control" type="text" formControlName="ideNom">
+          <label for="idePrenom">Prénom : </label>
+          <input class="form-control" type="text" formControlName="idePrenom">
+        </div>
+        <div class="form-group">
+          <label for="ideAge">Age : </label>
+          <input class="form-control" type="text" formControlName="ideAge">
+        </div>
+        <div class="form-group">
+          <label for="ideTelephone">Téléphone : </label>
+          <input class="form-control" type="text" formControlName="ideTelephone">
+        </div>
+        <div class="form-group">
+          <label for="ideMail">Mail : </label>
+          <input class="form-control" type="email" formControlName="ideMail">
+        </div>
+        <div>
+          <input  type="radio" name="ideSexe" value="H" formControlName="ideSexe" />
+          <label class="radio-label"> Homme</label>
+          <input  type="radio" name="ideSexe" value="F" formControlName="ideSexe" />
+          <label class="radio-label">Femme</label>
         </div>
 
+        <div formGroupName="bmdAdresse">
+
+          <div class="form-group">
+            <label for="adrNumRue">Numéro de rue : </label>
+            <input class="form-control" type="text" formControlName="adrNumRue">
+          </div>
+          <div class="form-group">
+            <label for="adrNomRue">Nom de rue : </label>
+            <input class="form-control" type="text" formControlName="adrNomRue">
+          </div>
+          <div class="form-group">
+            <label for="adrCplAdr">Complément d'adresse : </label>
+            <input class="form-control" type="text" formControlName="adrCplAdr">
+          </div>
+          <div class="form-group">
+            <label for="adrCp">Code postal : </label>
+            <input class="form-control" type="text" formControlName="adrCp">
+          </div>
+          <div class="form-group">
+            <label for="adrVille">Ville : </label>
+            <input class="form-control" type="text" formControlName="adrVille">
+          </div>
+        </div>
       </div>
     <button type="submit" class="btn btn-success">Ajouter</button>
   </form>
