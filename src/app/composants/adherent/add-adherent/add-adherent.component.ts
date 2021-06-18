@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-add-adherent',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddAdherentComponent implements OnInit {
 
+  myFormAdh: FormGroup;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public onSubmit() {
+
+  }
 }

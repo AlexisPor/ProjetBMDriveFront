@@ -9,22 +9,14 @@ import { PanierService } from 'src/app/services/panier/panier.service';
 })
 export class ListPanierComponent implements OnInit {
 
-  newPanier : Panier[]=[]; // Un tableau de panier 
 
-  constructor(private panierService : PanierService) {}
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.listePanier();
+
   }
 
-  private listePanier(){
-    this.panierService.findAllPanier().subscribe((data)=>{
-      this.newPanier=data;
-    },
-    (error)=>{
-     console.log(error)
-   }
-   );
-  }
+
 
 }
