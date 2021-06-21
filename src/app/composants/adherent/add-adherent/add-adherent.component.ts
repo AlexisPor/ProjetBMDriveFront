@@ -12,10 +12,52 @@ import { AdherentService } from 'src/app/services/adherent/adherent.service';
 })
 export class AddAdherentComponent implements OnInit {
 
+  myFormAdh: FormGroup;
+
+  constructor(private adhService: AdherentService,
+              private fb: FormBuilder) { }
 
   ngOnInit(): void {
-
+    this.initFormAdh();
   }
 
+  private initFormAdh() {
+    this.myFormAdh = this.fb.group({
+      adhNomUtilisateur: [""],
+      adhMotDePasse: [""],
+      bmdIdentite: this.fb.group({
+        ideNom: [""],
+        idePrenom: [""],
+        ideAge: [""],
+        ideTelephone: [""],
+        ideMail: [""],
+        ideSexe: [""],
+          bmdAdresse: this.fb.group({
+            adrNumRue: [""],
+            adrNomRue: [""],
+            adrCplAdr: [""],
+            adrCp: [""],
+            adrVille: [""]
 
+          }),
+        }),
+    });
+  };
+
+  public onSubmit() {
+    const dataAdh = this.myFormAdh.value;
+
+    let adherent: Adherent = new Adherent();
+
+    adherent.bmdIdentite.bmdAdresse = dataAdh.bmdAdresse;
+    adherent.bmdIdentite = dataAdh.bmdIdentite;
+    adherent.adhNomUtilisateur = dataAdh.adhNomUtilisateur;
+    adherent.adhMotDePasse = dataAdh.adhMotDePasse;
+
+    this.adhService.addAdherent(adherent).subscribe(
+      (response) => {
+        console.log(`Adherent ajouté ${{response}}`);
+
+      });
+  };
 }
