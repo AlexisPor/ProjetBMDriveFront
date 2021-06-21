@@ -1,63 +1,82 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Adherent } from 'src/app/models/adherent/adherent.model';
-import { Adresse } from 'src/app/models/adresse/adresse.model';
-import { Identite } from 'src/app/models/identite/identite.model';
-import { AdherentService } from 'src/app/services/adherent/adherent.service';
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="jumbotron col-md-5 offset-md-3" id="jumbotron" style="background-color: burlywood;">
+    <form [formGroup]="myFormAdh" (ngSubmit)="onSubmit()">
+      <div>
+        <h1>Création d'un adherent</h1>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="adhNomUtilisateur">Nom d'utilisateur </label>
+        <input class="form-control" type="text" formControlName="adhNomUtilisateur">
+      </div>
+      <div class="form-group">
+        <label for="adhMotDePasse">Mot de passe : </label>
+        <input class="form-control" type="password" formControlName="adhMotDePasse">
+      </div>
 
-@Component({
-  selector: 'app-add-adherent',
-  templateUrl: './add-adherent.component.html',
-  styleUrls: ['./add-adherent.component.css']
-})
-export class AddAdherentComponent implements OnInit {
+      <div formGroupName="bmdIdentite">
 
-  myFormAdh: FormGroup;
+        <div class="form-group">
+          <label for="ideNom">Nom : </label>
+          <input class="form-control" type="text" formControlName="ideNom">
+        </div>
+        <div class="form-group">
+          <label for="idePrenom">Prénom : </label>
+          <input class="form-control" type="text" formControlName="idePrenom">
+        </div>
+        <div class="form-group">
+          <label for="ideAge">Age : </label>
+          <input class="form-control" type="text" formControlName="ideAge">
+        </div>
+        <div class="form-group">
+          <label for="ideTelephone">Téléphone : </label>
+          <input class="form-control" type="text" formControlName="ideTelephone">
+        </div>
+        <div class="form-group">
+          <label for="ideMail">Mail : </label>
+          <input class="form-control" type="email" formControlName="ideMail">
+        </div>
+        <div>
+          <input  type="radio" name="ideSexe" value="H" formControlName="ideSexe" />
+          <label class="radio-label"> Homme</label>
+          <input  type="radio" name="ideSexe" value="F" formControlName="ideSexe" />
+          <label class="radio-label">Femme</label>
+        </div>
 
-  constructor(private adhService: AdherentService,
-              private fb: FormBuilder) { }
+        <div formGroupName="bmdAdresse">
 
-  ngOnInit(): void {
-    this.initFormAdh();
-  }
+          <div class="form-group">
+            <label for="adrNumRue">Numéro de rue : </label>
+            <input class="form-control" type="text" formControlName="adrNumRue">
+          </div>
+          <div class="form-group">
+            <label for="adrNomRue">Nom de rue : </label>
+            <input class="form-control" type="text" formControlName="adrNomRue">
+          </div>
+          <div class="form-group">
+            <label for="adrCplAdr">Complément d'adresse : </label>
+            <input class="form-control" type="text" formControlName="adrCplAdr">
+          </div>
+          <div class="form-group">
+            <label for="adrCp">Code postal : </label>
+            <input class="form-control" type="text" formControlName="adrCp">
+          </div>
+          <div class="form-group">
+            <label for="adrVille">Ville : </label>
+            <input class="form-control" type="text" formControlName="adrVille">
+          </div>
+        </div>
+      </div>
+    <button type="submit" class="btn btn-success">Ajouter</button>
+  </form>
+</div>
+</body>
+</html>
 
-  private initFormAdh() {
-    this.myFormAdh = this.fb.group({
-      adhNomUtilisateur: [""],
-      adhMotDePasse: [""],
-      bmdIdentite: this.fb.group({
-        ideNom: [""],
-        idePrenom: [""],
-        ideAge: [""],
-        ideTelephone: [""],
-        ideMail: [""],
-        ideSexe: [""],
-          bmdAdresse: this.fb.group({
-            adrNumRue: [""],
-            adrNomRue: [""],
-            adrCplAdr: [""],
-            adrCp: [""],
-            adrVille: [""]
-
-          }),
-        }),
-    });
-  };
-
-  public onSubmit() {
-    const dataAdh = this.myFormAdh.value;
-
-    let adherent: Adherent = new Adherent();
-
-    adherent.bmdIdentite.bmdAdresse = dataAdh.bmdAdresse;
-    adherent.bmdIdentite = dataAdh.bmdIdentite;
-    adherent.adhNomUtilisateur = dataAdh.adhNomUtilisateur;
-    adherent.adhMotDePasse = dataAdh.adhMotDePasse;
-
-    this.adhService.addAdherent(adherent).subscribe(
-      (response) => {
-        console.log(`Adherent ajouté ${{response}}`);
-
-      });
-  };
-}
