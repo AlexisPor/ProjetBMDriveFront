@@ -23,4 +23,12 @@ export class ListAdherentComponent implements OnInit {
         this.adherent = response;
       });
   };
+
+  public onSubmit(id: number) {
+    this.adhService.deleteAdherent(id).subscribe(
+      (value) => {
+        console.log("Adherent supprimé");
+
+      });
+  };
 }

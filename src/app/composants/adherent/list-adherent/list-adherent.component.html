@@ -11,6 +11,7 @@
       <th scope="col">Sexe</th>
       <th scope="col">Téléphone</th>
       <th scope="col">Ville</th>
+      <th scope="col">Supprimer</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +25,7 @@
       <td>{{adh.bmdIdentite.ideSexe}}</td>
       <td>{{adh.bmdIdentite.ideTelephone}}</td>
       <td>{{adh.bmdIdentite.bmdAdresse.adrVille}}</td>
+      <td><button type="submit" class="btn btn-danger" (click)='onSubmit(adh.adhId)'>Supprimer</button></td>
     </tr>
   </tbody>
 </table>
