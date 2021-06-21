@@ -6,18 +6,34 @@
         
             <div class="form-group"   >
                 <label for="type">Type : </label>
+<<<<<<< Updated upstream
                 <input type="text" class="form-control" [(ngModel)]= "suppmed.supType" id="type" name="type"  >
+=======
+                <input type="text"  id="type" class="form-control" [(ngModel)]= "supmed.supType" name="supType" >
+>>>>>>> Stashed changes
                 
             </div>
 
             <div class="form-group "  >
+<<<<<<< Updated upstream
                 <label for="titre">Titre : </label>
                 <input type="text" class="form-control" [(ngModel)]= "suppmed.bmdArticle.artTitre" id="titre" name="titre" >
+=======
+                <label for="cote">Côte : </label>
+                <input type="text"  id="cote" class="form-control" [(ngModel)]= "supmed.bmdArticle.artCote" name="artCote" >
+                
+            </div>
+
+            <div class="form-group"  >
+                <label for="titre">Titre : </label>
+                <input type="text" id="titre" class="form-control" [(ngModel)]= "supmed.bmdArticle.artTitre" name="artTitre" >
+>>>>>>> Stashed changes
                 
             </div>
 
             <div class="form-group" >
                 <label for="auteur">Auteur : </label>
+<<<<<<< Updated upstream
                 <input type="text" class="form-control" [(ngModel)]= "suppmed.bmdArticle.artAuteur" id="auteur" name="auteur" >
                
             </div>
@@ -41,6 +57,25 @@
             </div>
 
             <button (click)="onSubmit()" class="btn btn-success">Ajouter</button>
+=======
+                <input type="text" id="auteur" class="form-control" [(ngModel)]= "supmed.bmdArticle.artAuteur" name="artAuteur"  >
+                
+            </div>
+
+            <div class="form-group" >
+                <label for="dateEmprunt" >Date d'emprunt' : </label>
+                <input type="text" id="dateEmprunt" class="form-control" [(ngModel)]= "supmed.bmdArticle.artDateEmprunt" name="artDateEmprunt"  >
+                
+            </div>
+
+            <div class="form-group" >
+                <label for="dateretour">Date de retour : </label>
+                <input type="text" id="dateretour" class="form-control" [(ngModel)]= "supmed.bmdArticle.artDateRetour" id="artDateRetour">
+                
+            </div>
+
+            <button (click) = "onSubmit()" class="btn btn-success">Ajouter</button>
+>>>>>>> Stashed changes
         
     </form>
     </div>

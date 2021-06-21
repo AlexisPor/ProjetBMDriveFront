@@ -1,5 +1,12 @@
+<<<<<<< Updated upstream
 export class Article {
   
+=======
+export class TArticle {
+constructor(){
+
+}
+>>>>>>> Stashed changes
   public artId:number;
   public artCote: string;
   public artTitre: string;

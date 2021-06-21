@@ -15,8 +15,8 @@ export class SuppmediaService {
     return this.http.get<SuppMedia[]>(environment.urlSm);
   };
 
-  public addSuppMedia(supp: SuppMedia): Observable<SuppMedia[]>{
-    return this.http.post<SuppMedia[]>(environment.urlSm , supp);
+  public addSuppMedia(supp: SuppMedia): Observable<SuppMedia>{
+    return this.http.post<SuppMedia>(environment.urlSm , supp);
   };
 
   public updateSuppMedia(id: number): Observable<Object>{

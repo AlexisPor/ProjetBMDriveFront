@@ -1,1 +1,41 @@
-<p>add-livre works!</p>
+<div class="jumbotron" style="margin-top: 120px;">
+    <div class="col-md-6 offset-md-3">
+        <h3>Ajouter un livre</h3>
+    <form [formGroup]="FormLivre" (ngSubmit)="onSubmit()">    
+        
+            <div class="form-group"   >
+                <label for="type">Nb Page : </label>
+                <input type="text" class="form-control" formControlName ="livNbPages" >
+                
+            </div>
+            
+            <div formGroupName = "TArticle">
+                <div class="form-group"  >
+                    <label for="titre">Titre : </label>
+                    <input type="text" class="form-control" formControlName="artTitre" >
+                    
+                </div>
+    
+                <div class="form-group" >
+                    <label for="auteur">Auteur : </label>
+                    <input type="text" class="form-control" formControlName="artAuteur"  >
+                    
+                </div>
+    
+                <div class="form-group" >
+                    <label for="dateEmprunt">Date d'emprunt' : </label>
+                    <input type="text" class="form-control"  formControlName="artDateEmprunt"  >
+                    
+                </div>
+    
+                <div class="form-group" >
+                    <label for="dateretour">Date de retour : </label>
+                    <input type="text" class="form-control" formControlName="artDateRetour">
+                    
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Ajouter</button>
+        
+    </form>
+    </div>
+</div>

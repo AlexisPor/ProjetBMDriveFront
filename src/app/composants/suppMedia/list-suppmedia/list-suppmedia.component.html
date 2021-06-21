@@ -1,5 +1,6 @@
 
 <div class="container" style="margin-top: 120px;">
+<<<<<<< Updated upstream
          
     <h2>Liste des departements</h2>
     <div class="card">
@@ -47,3 +48,52 @@
       </div>
 
 </div>
+=======
+        
+  <h2>Liste des Support Media</h2>
+
+  <div class="card">
+      <table class="table table-stripped table-bordered table-hover w-auto ">
+        <thead class="thead-light">
+          <tr>
+              
+            <th>Id</th>                  
+            <th>Type</th>
+            <th>Côte</th>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Date d'emprunt</th>
+            <th>Date de retour</th>
+                              
+            
+            <th colspan="2">Action </th>
+           
+          </tr>
+        </thead>
+        <tbody class="" style="background-color: aqua;">
+          <tr *ngFor = "let sm of supmed">
+
+            <td>{{sm.supId}}</td>                 
+            <td>{{sm.supType}}</td>
+            <td>{{sm.bmdArticle.artCote}}</td>
+            <td>{{sm.bmdArticle.artTitre}}</td>
+            <td>{{sm.bmdArticle.artAuteur}}</td>                
+            <td>{{sm.bmdArticle.artDateEmprunt}}</td>
+            <td>{{sm.bmdArticle.artDateRetour}}</td>
+            <td>{{sm.bmdArticle.artId}}</td>
+            <td>
+              <button  class = "btn btn-primary">
+                Modifier
+              </button>
+              <td>
+              <button  class = "btn btn-danger"> 
+                Supprimer
+              </button>
+          </td>
+          </tr>                
+        </tbody>
+      </table>
+    </div>
+
+</div>
+>>>>>>> Stashed changes

@@ -1,7 +1,7 @@
-import { Article } from './article.model';
+import { TArticle } from './article.model';
 
 describe('Article.Model', () => {
   it('should create an instance', () => {
-    expect(new Article()).toBeTruthy();
+    expect(new TArticle()).toBeTruthy();
   });
 });

@@ -10,6 +10,7 @@ import { SuppmediaService } from 'src/app/services/suppMedia/suppmedia.service';
 })
 export class AddSuppmediaComponent implements OnInit {
 
+<<<<<<< Updated upstream
   suppmed : SuppMedia = new SuppMedia();
 
   ajouter = false;
@@ -18,9 +19,53 @@ export class AddSuppmediaComponent implements OnInit {
     private supmediaService : SuppmediaService,
     private router : Router,
     private route : ActivatedRoute,
+=======
+  userForm:any;
+
+supmed : SuppMedia = new SuppMedia();
+
+ajouter = false;
+
+  constructor(
+    private supmedService : SuppmediaService,
+    private router : Router,
+>>>>>>> Stashed changes
   ) { }
 
   ngOnInit(): void {
+    
+  }
+
+  saveSupMedia() : void {
+    const data = {
+      supType : this.supmed.supType,
+      artCote : this.supmed.bmdArticle.artCote,
+      artTitre : this.supmed.bmdArticle.artTitre,
+      artAuteur : this.supmed.bmdArticle.artAuteur,
+      artDateEmprunt : this.supmed.bmdArticle.artDateEmprunt,
+      artDateRetour : this.supmed.bmdArticle.artDateRetour,
+      
+    };
+    console.log(this.supmed.supType);
+    
+    this.supmedService.addSuppMedia(this.supmed)
+    .subscribe(data => {
+      console.log(data);
+      this.ajouter = true;
+      this.goToSupmediaList();
+    },
+    error =>{ console.log(error);
+  });
+ 
+}
+
+goToSupmediaList() {
+    this.router.navigate(['/list-suppmedia']);
+  }
+
+  public onSubmit() {
+    console.log("Valider le formulaire");
+    this.saveSupMedia();
   }
 
   saveSuppMeda() : void {
