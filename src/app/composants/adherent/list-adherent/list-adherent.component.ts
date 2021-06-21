@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Adherent } from 'src/app/models/adherent/adherent.model';
+import { AdherentService } from 'src/app/services/adherent/adherent.service';
 
 @Component({
   selector: 'app-list-adherent',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListAdherentComponent implements OnInit {
 
-  constructor() { }
+  adherent: Adherent[] = [];
+
+  constructor(private adhService: AdherentService) { }
 
   ngOnInit(): void {
+    this.findAllAdh();
   }
 
+  public findAllAdh() {
+    this.adhService.findAllAdherent().subscribe(
+      (response) => {
+        this.adherent = response;
+      });
+  };
 }

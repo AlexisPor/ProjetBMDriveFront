@@ -1,1 +1,29 @@
-<p>list-adherent works!</p>
+<h1>Liste des adherents</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom d'utilisateur</th>
+      <th scope="col">Mot de passe</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Mail</th>
+      <th scope="col">Sexe</th>
+      <th scope="col">Téléphone</th>
+      <th scope="col">Ville</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let adh of adherent">
+      <th scope="row">1</th>
+      <td>{{adh.adhNomUtilisateur}}</td>
+      <td>{{adh.adhMotDePasse}}</td>
+      <td>{{adh.bmdIdentite.ideNom}}</td>
+      <td>{{adh.bmdIdentite.idePrenom}}</td>
+      <td>{{adh.bmdIdentite.ideMail}}</td>
+      <td>{{adh.bmdIdentite.ideSexe}}</td>
+      <td>{{adh.bmdIdentite.ideTelephone}}</td>
+      <td>{{adh.bmdIdentite.bmdAdresse.adrVille}}</td>
+    </tr>
+  </tbody>
+</table>
