@@ -12,8 +12,8 @@
                 <tbody >
                     <tr *ngFor="let panier of newPanier">
                         <td>{{panier.panId}}</td>
-                        <td>{{panier.TArticle.artId}}</td>
-                        <td>{{panier.TReservation.resId}}</td>
+                        <td>{{panier.bmdArticle.artTitre}}</td>
+                        <td>{{panier.bmdReservation.resId}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -23,6 +23,6 @@
 
 <div class="row">
     <div class="col-5"></div>
-    <div class="col-2 btn" style="background-color: aquamarine; border-color: black ;" [routerLink]="['/Menu']">Retour au menu principal</div>
+    <div class="col-2 btn" style="background-color: aquamarine; border-color: black ;" [routerLink]="['menu']">Retour au menu principal</div>
     <div class="col-5"></div>
 </div>

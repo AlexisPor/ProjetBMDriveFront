@@ -11,6 +11,77 @@
                 <li class="nav-item active">
                     <a class="nav-link" [routerLink]="['']">Menu <span class="sr-only">(current)</span></a>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Adhérents
+                      </a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="['add-adherent']">Ajouter un adhérent</a>
+                        <a class="dropdown-item" [routerLink]="['list-adherent']">Liste des adhérents</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" [routerLink]="'agentBM'"  id="navbardrop" data-toggle="dropdown">
+                    Agents
+                    </a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="'add-agent'">Ajouter un agent</a>
+                        <a class="dropdown-item" [routerLink]="'list-agent'">Liste des agents</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" [routerLink]="'casier'"  id="navbardrop" data-toggle="dropdown">
+                    Casiers
+                    </a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="'add-casier'">Ajouter casier</a>
+                        <a class="dropdown-item" [routerLink]="'list-casier'">Liste des casiers</a>
+
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" [routerLink]="'livre'"  id="navbardrop" data-toggle="dropdown">
+                    Livres
+                    </a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="'add-livre'">Ajouter livre</a>
+                        <a class="dropdown-item" [routerLink]="'list-livre'">Liste des livres</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" [routerLink]="'reservation'"  id="navbardrop" data-toggle="dropdown">
+                    Réservations
+                    </a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="'add-reservation'">Ajouter une réservations</a>
+                        <a class="dropdown-item" [routerLink]="'list-reservation'">Liste des réservations</a>
+                    
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" [routerLink]="'suppMedia'"  id="navbardrop" data-toggle="dropdown">
+                    Supports média
+                    </a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" [routerLink]="'add-suppmedia'">Ajouter une réservations</a>
+                        <a class="dropdown-item" [routerLink]="'list-suppmedia'">Liste des réservations</a>
+                      
+                    </div>
+                </li>
+
+                
             
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" [routerLink]="['list-panier']"  id="navbardrop" data-toggle="dropdown">
@@ -18,11 +89,13 @@
                     </a>
                     
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" [routerLink]="['add-panier']">Ajouter au panier</a>
+                        <a class="dropdown-item" [routerLink]="'add-panier'">Ajouter au panier</a>
                         <a class="dropdown-item" [routerLink]="['list-panier']">Contenu du panier</a>
-                        <a class="dropdown-item" [routerLink]="['update-panier']">Modifier panier </a>
+                        
                     </div>
                 </li>
+
+
         </ul>
 
     <form class="form-inline my-2 my-lg-0">
@@ -31,7 +104,7 @@
     </form>
 
     </div>
-  </nav>
+  
 
 
 <router-outlet></router-outlet>

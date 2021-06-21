@@ -27,8 +27,10 @@ import { UpdateSuppmediaComponent } from './composants/suppMedia/update-suppmedi
 import { AddVisiteurComponent } from './composants/visiteur/add-visiteur/add-visiteur.component';
 import { ListVisiteurComponent } from './composants/visiteur/list-visiteur/list-visiteur.component';
 import { UpdateVisiteurComponent } from './composants/visiteur/update-visiteur/update-visiteur.component';
+import { MenuComponent } from './menu/menu/menu.component';
 
 const routes: Routes = [
+  
   {path: "add-adherent", component: AddAdherentComponent },
   {path: "list-adherent", component: ListAdherentComponent },
   {path: "update-adherent", component: UpdateAdherentComponent },
@@ -64,6 +66,8 @@ const routes: Routes = [
   {path: "add-visiteur", component: AddVisiteurComponent },
   {path: "list-visiteur", component: ListVisiteurComponent },
   {path: "update-visiteur", component: UpdateVisiteurComponent },
+
+  {path: "menu", component: MenuComponent}
 
 
 

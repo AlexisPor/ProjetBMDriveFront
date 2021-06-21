@@ -4,24 +4,41 @@
     </div>
 
     <form>
-        <div class="form-row">
-            <div class="col-sm-2 col-md-2 col-lg-3">
-              <label for="inputIdPanier4">ID panier</label>
-              <input type="number" [(ngModel)]="newPanier.panId" name="panId" class="form-control" id="inputpanId4" placeholder="panId">
+        <div class="form-column">
+            <div class="col-sm-2 col-md-2 col-lg-2">
+              <label for="inputartId4">ID Article</label>
+              <input type="number" [(ngModel)]="newPanier.bmdArticle.artId" name="artId" class="form-control"
+               id="inputartId4" placeholder="id article">
             </div>
 
-            <div class="col-sm-4 col-md-4 col-lg-6">
-                <label>Article</label>
-                    <select class="form-control" name="artId" id="artId" [(ngModel)]="newPanier.TArticle.artId" >
-                        <option *ngFor=" let article of listeArticles" [value]="article.artId">{{article.artId}}</option>
-                    </select>
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <label for="inputartAuteur4">Auteur</label>
+                <input type="text" [(ngModel)]="newPanier.bmdArticle.artAuteur" name="artAuteur" class="form-control" 
+                id="inputartAuteur4" placeholder="Auteur / Nom ">
             </div>
 
-            <div class="col-sm-2 col-md-2 col-lg-3">
-                <label>Réservation</label>
-                <select class="form-control" name="resId" id="resId" [(ngModel)]="newPanier.TReservation.resId" >
-                    <option *ngFor=" let reservation of listeReservation" [value]="reservation.resId">{{reservation.resId}}</option>
-                </select> 
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label for="inputarTitre4">Titre</label>
+                <input type="text" [(ngModel)]="newPanier.bmdArticle.artTitre" name="artTitre" class="form-control" 
+                id="inputartTitre4" placeholder="Titre">
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <label for="inputartCote4">artCote</label>
+                <input type="text" [(ngModel)]="newPanier.bmdArticle.artCote" name="artCote" class="form-control" 
+                id="inputartCote4" placeholder="Côte">
+            </div>
+
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label for="inputartDateEmprunt4">Date d'emprunt</label>
+                <input type="date" [(ngModel)]="newPanier.bmdArticle.artDateEmprunt" name="artDateEmprunt" class="form-control" 
+                id="inputartDateEmprunt4" placeholder="Date emprunt">
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <label for="inputartDateRetour4">Date retour</label>
+                <input type="date" [(ngModel)]="newPanier.bmdArticle.artDateRetour" name="artDateRetour" class="form-control" 
+                id="inputartDateRetour4" placeholder="Date retour">
             </div>
         </div>
 
