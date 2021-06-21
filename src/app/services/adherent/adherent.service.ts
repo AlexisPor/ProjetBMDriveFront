@@ -24,7 +24,7 @@ export class AdherentService {
   };
 
   public deleteAdherent(id: number): Observable<Object>{
-    return this.http.delete(environment.urlAdh + id);
+    return this.http.delete(environment.urlAdh + "/" + id);
   };
 
   public findAdherentById(id: number): Observable<Adherent>{
