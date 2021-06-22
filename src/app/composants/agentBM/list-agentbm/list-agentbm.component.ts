@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Agentbm } from 'src/app/models/agentBM/agentbm.model';
+import { AgentbmService } from 'src/app/services/agentBM/agentbm.service';
 
 @Component({
   selector: 'app-list-agentbm',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListAgentbmComponent implements OnInit {
 
-  constructor() { }
+  newAgentBM : Agentbm[];
+
+  constructor(private agentBMService : AgentbmService) {
+
+   }
 
   ngOnInit(): void {
+    this.findAllAgentBM();
+  }
+
+  private findAllAgentBM() {
+    this.agentBMService.findAllAgentBM().subscribe(
+      (value)=>{
+        this.newAgentBM=value;
+      }
+    )
+    
   }
 
 }
