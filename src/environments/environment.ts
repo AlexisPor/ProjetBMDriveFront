@@ -14,7 +14,7 @@ export const environment = {
   urlLiv: 'http://localhost:8888/livre/livMap',
   urlPan: 'http://localhost:8888/panier/panMap',
   urlRes: 'http://localhost:8888/reservation/resMap',
-  urlSm: 'http://localhost:8888/sm/smMap',
+  urlSm: 'http://localhost:8888/sm/smMap/',
   urlVis: 'http://localhost:8888/visiteur/visMap'
 };
 

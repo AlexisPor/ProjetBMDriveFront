@@ -12,6 +12,8 @@ export class ListSuppmediaComponent implements OnInit {
 
   supmed : SuppMedia[] = [];
 
+  confirmer = false;
+
   constructor(
     private supmediaService : SuppmediaService,
     private router : Router
@@ -28,7 +30,13 @@ private findAllSuppMedia() {
   });
 }
 
-
+deleteSuppMedia(supId : number) {
+  this.supmediaService.deleteSuppMedia(supId)
+  .subscribe(data => {
+    console.log(data);
+    this.findAllSuppMedia();
+  })
+}
 
 
 

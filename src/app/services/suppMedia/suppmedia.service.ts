@@ -23,8 +23,8 @@ export class SuppmediaService {
     return this.http.put(environment.urlSm , id);
   };
 
-  public deleteSuppMedia(id: number, supp: SuppMedia): Observable<Object>{
-    return this.http.delete(environment.urlSm + id + supp);
+  public deleteSuppMedia(id: number): Observable<Object>{
+    return this.http.delete(environment.urlSm + id);
   };
 
   public findSuppMediaById(id: number, supp: SuppMedia): Observable<SuppMedia>{
