@@ -1,8 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Adherent } from 'src/app/models/adherent/adherent.model';
-import { Adresse } from 'src/app/models/adresse/adresse.model';
-import { Identite } from 'src/app/models/identite/identite.model';
 import { AdherentService } from 'src/app/services/adherent/adherent.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class AddAdherentComponent implements OnInit {
   myFormAdh: FormGroup;
 
   constructor(private adhService: AdherentService,
-              private fb: FormBuilder) { }
+              private fb: FormBuilder,
+              private route: Router) { }
 
   ngOnInit(): void {
     this.initFormAdh();
@@ -53,11 +54,13 @@ export class AddAdherentComponent implements OnInit {
     adherent.bmdIdentite = dataAdh.bmdIdentite;
     adherent.adhNomUtilisateur = dataAdh.adhNomUtilisateur;
     adherent.adhMotDePasse = dataAdh.adhMotDePasse;
+    console.log(adherent);
 
     this.adhService.addAdherent(adherent).subscribe(
       (response) => {
         console.log(`Adherent ajouté ${{response}}`);
 
-      });
+      })
+      this.route.navigate(["list-adherent"]);
   };
 }
