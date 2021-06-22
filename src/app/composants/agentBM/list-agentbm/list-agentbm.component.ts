@@ -28,4 +28,11 @@ export class ListAgentbmComponent implements OnInit {
     
   }
 
+  deleteAgentBM(abmId : number){
+    
+    let conf = confirm("Êtes-vous sûr ?");
+    if (conf)
+    this.agentBMService.deleteAgentBM(abmId,);
+  }
+
 }

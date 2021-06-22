@@ -12,8 +12,9 @@
       <th scope="row">1</th>
       <td>{{agt.abmNomUtilisateur}}</td>
       <td>{{agt.abmMotDePasse}}</td>
-
-      <td><button type="submit" class="btn btn-danger" >Supprimer</button></td>
+      
+      <td><button type="submit" class="btn btn-danger" (click)="deleteAgentBM(AgentBM.abmId)">Supprimer</button></td>
+      
     </tr>
   </tbody>
 </table>
