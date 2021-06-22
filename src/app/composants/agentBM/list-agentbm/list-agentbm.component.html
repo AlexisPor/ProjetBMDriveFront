@@ -1,1 +1,19 @@
-<p>list-agentbm works!</p>
+<h1>Liste des agents</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom d'utilisateur</th>
+      <th scope="col">Mot de passe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let agt of newAgentBM">
+      <th scope="row">1</th>
+      <td>{{agt.abmNomUtilisateur}}</td>
+      <td>{{agt.abmMotDePasse}}</td>
+
+      <td><button type="submit" class="btn btn-danger" >Supprimer</button></td>
+    </tr>
+  </tbody>
+</table>
