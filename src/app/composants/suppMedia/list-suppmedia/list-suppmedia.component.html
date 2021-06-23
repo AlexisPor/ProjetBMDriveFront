@@ -1,7 +1,7 @@
 
 <div class="container" style="margin-top: 120px;">
          
-    <h2>Liste des support médias</h2>
+    <h1 class="d-block p-3 bg-info text-white">Liste des support médias</h1>
     <div class="card">
     <div class="table-responsive{-sm|-md|-lg|-xl}">
         <table class="table table-stripped table-bordered table-hover w-auto ">
@@ -32,7 +32,9 @@
               <td>{{sm.bmdArticle.artCote}}</td>                 
                             
               <td>
-                
+                <button  class = "btn btn-primary" (click) = "editSuppMedia(sm.supId)">
+                  Edit
+              </button>
                 <td>
                 <button  class = "btn btn-danger" (click) = "deleteSuppMedia(sm.supId)">
                     Delete

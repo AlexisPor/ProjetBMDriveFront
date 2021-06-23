@@ -27,7 +27,7 @@ export class ArticleService {
     return this.http.delete(environment.urlArt + id + art);
   };
 
-  public findArticleById(id: number, art: Article): Observable<Article>{
-    return this.http.get<Article>(environment.urlArt + id + art);
+  public findArticleById(id: number): Observable<Article>{
+    return this.http.get<Article>(environment.urlArt + id);
   };
 }
