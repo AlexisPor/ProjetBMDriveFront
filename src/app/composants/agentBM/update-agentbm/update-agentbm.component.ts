@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Agentbm } from 'src/app/models/agentBM/agentbm.model';
+import { AgentbmService } from 'src/app/services/agentBM/agentbm.service';
 
 @Component({
   selector: 'app-update-agentbm',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateAgentbmComponent implements OnInit {
 
-  constructor() { }
+  currentAgentBM = new Agentbm();
+
+  agentBM : Agentbm= new Agentbm();
+
+  constructor(private activactedRoute: ActivatedRoute,
+              private router: Router,
+              private agentBMService: AgentbmService) { }
 
   ngOnInit(): void {
+    let id=this.activactedRoute.snapshot.params["abmId"];
+    this.agentBMService.findAgentBMById(id).subscribe((response)=>{
+    this.currentAgentBM=response;
+    });
+  }
+
+  updateAgentBM(){
+    this.agentBMService.updateAgentBM(this.currentAgentBM).subscribe(data => {
+      console.log(data);
+      this.updateAgentBM();
+    })
+    this.router.navigate(["/list-agent"]);
   }
 
 }

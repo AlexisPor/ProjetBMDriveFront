@@ -11,7 +11,10 @@ export class ListAgentbmComponent implements OnInit {
 
   newAgentBM : Agentbm[];
 
-  constructor(private agentBMService : AgentbmService) {
+  agentBM : Agentbm= new Agentbm();
+
+  constructor(private agentBMService : AgentbmService
+    ) {
 
    }
 
@@ -32,7 +35,11 @@ export class ListAgentbmComponent implements OnInit {
     
     let conf = confirm("Êtes-vous sûr ?");
     if (conf)
-    this.agentBMService.deleteAgentBM(abmId,);
+    this.agentBMService.deleteAgentBM(abmId).subscribe(data => {
+      console.log(data);
+      this.findAllAgentBM();
+    })
+
   }
 
 }
