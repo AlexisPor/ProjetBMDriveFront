@@ -28,7 +28,7 @@ export class ListAdherentComponent implements OnInit {
     this.adhService.deleteAdherent(id).subscribe(
       (value) => {
         console.log("Adherent supprimé");
-
+        this.findAllAdh();
       });
   };
 }
