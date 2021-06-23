@@ -29,7 +29,7 @@ export class UpdateSuppmediaComponent implements OnInit {
   }
 
  onSubmit() {
-   this.suppMediaService.updateSuppMedia(this.suppMedia.supId, this.suppMedia)
+   this.suppMediaService.updateSuppMedia(this.suppMedia)
    .subscribe(data => {
      this.goToSuppMediaList();
    },

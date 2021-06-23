@@ -19,8 +19,8 @@ export class SuppmediaService {
     return this.http.post<SuppMedia[]>(environment.urlSm , supp);
   };
 
-  public updateSuppMedia(id: number, supp: SuppMedia): Observable<Object>{
-    return this.http.put(environment.urlSm , id);
+  public updateSuppMedia( supp: SuppMedia): Observable<Object>{
+    return this.http.put(environment.urlSm , supp);
   };
 
   public deleteSuppMedia(id: number): Observable<Object>{
