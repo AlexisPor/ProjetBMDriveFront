@@ -12,22 +12,22 @@ export class AdherentService {
   constructor(private http: HttpClient,) { }
 
   public findAllAdherent(): Observable<Adherent[]>{
-    return this.http.get<Adherent[]>(environment.urlAdh);
+    return this.http.get<Adherent[]>(environment.urlAdhList);
   };
 
   public addAdherent(adh: Adherent): Observable<Adherent[]>{
-    return this.http.post<Adherent[]>(environment.urlAdh , adh);
+    return this.http.post<Adherent[]>(environment.urlAdhAdd , adh);
   };
 
-  public updateAdherent(id: number): Observable<Object>{
-    return this.http.put(environment.urlAdh , id);
+  public updateAdherent(adh: Adherent): Observable<Object>{
+    return this.http.put('http://localhost:8888/adherent/adhMap' , adh);
   };
 
   public deleteAdherent(id: number): Observable<Object>{
-    return this.http.delete(environment.urlAdh + "/" + id);
+    return this.http.delete(environment.urlAdhDelete + id);
   };
 
   public findAdherentById(id: number): Observable<Adherent>{
-    return this.http.get<Adherent>(environment.urlAdh + id);
+    return this.http.get<Adherent>(environment.urlAdhFindById + id);
   };
 }

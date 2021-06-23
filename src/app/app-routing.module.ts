@@ -30,10 +30,10 @@ import { UpdateVisiteurComponent } from './composants/visiteur/update-visiteur/u
 import { MenuComponent } from './menu/menu/menu.component';
 
 const routes: Routes = [
-  
+
   {path: "add-adherent", component: AddAdherentComponent },
   {path: "list-adherent", component: ListAdherentComponent },
-  {path: "update-adherent", component: UpdateAdherentComponent },
+  {path: "update-adherent/:id", component: UpdateAdherentComponent },
 
   {path: "add-agent", component: AddAgentbmComponent },
   {path: "list-agent", component: ListAgentbmComponent },
