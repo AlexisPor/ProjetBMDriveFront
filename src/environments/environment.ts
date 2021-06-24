@@ -4,11 +4,7 @@
 
 export const environment = {
   production: false,
-  urlAdhList: 'http://localhost:8888/adherent/adhMap',
-  urlAdhAdd: 'http://localhost:8888/adherent/adhMap',
-  urlAdhDelete: 'http://localhost:8888/adherent/adhMap/',
-  urlAdhUpdate: 'http://localhost:8888/adherent/adhMap/',
-  urlAdhFindById: 'http://localhost:8888/adherent/adhMap/',
+  urlAdh: 'http://localhost:8888/adherent/adhMap/',
   urlAdr: 'http://localhost:8888/adresse/adrMap',
   urlAg: 'http://localhost:8888/agentBM/agMap',
   urlArt: 'http://localhost:8888/ar/artMap',
