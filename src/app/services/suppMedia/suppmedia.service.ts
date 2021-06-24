@@ -19,15 +19,15 @@ export class SuppmediaService {
     return this.http.post<SuppMedia[]>(environment.urlSm , supp);
   };
 
-  public updateSuppMedia(id: number): Observable<Object>{
-    return this.http.put(environment.urlSm , id);
+  public updateSuppMedia( supp: SuppMedia): Observable<Object>{
+    return this.http.put(environment.urlSm , supp);
   };
 
-  public deleteSuppMedia(id: number, supp: SuppMedia): Observable<Object>{
-    return this.http.delete(environment.urlSm + id + supp);
+  public deleteSuppMedia(id: number): Observable<Object>{
+    return this.http.delete(environment.urlSm + id);
   };
 
-  public findSuppMediaById(id: number, supp: SuppMedia): Observable<SuppMedia>{
-    return this.http.get<SuppMedia>(environment.urlSm + id + supp);
+  public findSuppMediaById(id: number): Observable<SuppMedia>{
+    return this.http.get<SuppMedia>(environment.urlSm + id);
   };
 }
