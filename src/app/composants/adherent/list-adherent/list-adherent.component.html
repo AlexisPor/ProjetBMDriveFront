@@ -2,6 +2,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Nom d'utilisateur</th>
       <th scope="col">Mot de passe</th>
       <th scope="col">Nom</th>
@@ -16,6 +17,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let adh of adherent">
+      <td>{{adh.adhId}}</td>
       <td>{{adh.adhNomUtilisateur}}</td>
       <td>{{adh.adhMotDePasse}}</td>
       <td>{{adh.bmdIdentite.ideNom}}</td>

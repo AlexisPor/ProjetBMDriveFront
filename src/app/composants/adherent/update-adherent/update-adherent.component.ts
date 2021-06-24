@@ -30,6 +30,7 @@ export class UpdateAdherentComponent implements OnInit {
   }
   private initFormUpdateAdh() {
     this.updateMyFormAdh = this.fb.group({
+      adhId:[this.adh.adhId],
       adhNomUtilisateur: [this.adh.adhNomUtilisateur],
       adhMotDePasse: [this.adh.adhMotDePasse],
       bmdIdentite: this.fb.group({

@@ -9,7 +9,7 @@ import { SuppmediaService } from 'src/app/services/suppMedia/suppmedia.service';
   styleUrls: ['./update-suppmedia.component.css']
 })
 export class UpdateSuppmediaComponent implements OnInit {
- 
+
   suppMedia : SuppMedia = new SuppMedia();
 
   constructor(
@@ -34,7 +34,7 @@ export class UpdateSuppmediaComponent implements OnInit {
      this.goToSuppMediaList();
    },
    error => console.log(error));
- } 
+ }
 
  goToSuppMediaList() {
    this.router.navigate(['/list-suppmedia']);

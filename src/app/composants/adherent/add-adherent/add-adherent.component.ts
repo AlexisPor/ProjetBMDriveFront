@@ -54,13 +54,10 @@ export class AddAdherentComponent implements OnInit {
     adherent.bmdIdentite = dataAdh.bmdIdentite;
     adherent.adhNomUtilisateur = dataAdh.adhNomUtilisateur;
     adherent.adhMotDePasse = dataAdh.adhMotDePasse;
-    console.log(adherent);
 
     this.adhService.addAdherent(adherent).subscribe(
       (response) => {
-        console.log(`Adherent ajouté ${{response}}`);
-
         this.route.navigate(["list-adherent"]);
-      })
+      });
   };
 }
