@@ -27,10 +27,9 @@ export class UpdateAgentbmComponent implements OnInit {
 
   updateAgentBM(){
     this.agentBMService.updateAgentBM(this.currentAgentBM).subscribe(data => {
-      console.log(data);
-      this.updateAgentBM();
+      console.log("Agent add");
+      this.router.navigate(["/list-agent"]);
     })
-    this.router.navigate(["/list-agent"]);
   }
 
 }

@@ -50,7 +50,8 @@ export class UpdateAdherentComponent implements OnInit {
         }),
     });
   };
-public onSubmit() {
+
+  public onSubmit() {
 
   const updateAdh = this.updateMyFormAdh.value;
 
@@ -58,13 +59,13 @@ public onSubmit() {
   this.adh.adhMotDePasse = updateAdh.adhMotDePasse;
   this.adh.bmdIdentite = updateAdh.bmdIdentite;
   this.adh.bmdIdentite.bmdAdresse = updateAdh.bmdIdentite.bmdAdresse;
-
+  console.log(this.adh);
   this.adhService.updateAdherent(this.adh).subscribe(
     (value) =>{
       console.log("Adherent modifié");
 
+      this.router.navigate(["list-adherent"]);
     });
-  this.router.navigate(["list-adherent"]);
   };
 
 }

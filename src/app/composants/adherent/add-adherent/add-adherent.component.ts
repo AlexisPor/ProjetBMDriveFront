@@ -60,7 +60,7 @@ export class AddAdherentComponent implements OnInit {
       (response) => {
         console.log(`Adherent ajouté ${{response}}`);
 
+        this.route.navigate(["list-adherent"]);
       })
-      this.route.navigate(["list-adherent"]);
   };
 }
