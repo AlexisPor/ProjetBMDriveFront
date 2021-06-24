@@ -7,6 +7,8 @@
       <th scope="col">Id</th>
       <th scope="col">Nom d'utilisateur</th>
       <th scope="col">Mot de passe</th>
+      <th scope="col">Suppression</th>
+      <th scope="col">Modification</th>
     </tr>
   </thead>
   <tbody>
@@ -14,10 +16,10 @@
       <td>{{agt.abmId}}</td>
       <td>{{agt.abmNomUtilisateur}}</td>
       <td>{{agt.abmMotDePasse}}</td>
-      
+
       <td><button  class="btn btn-danger" (click)="deleteAgentBM(agt.abmId)">Supprimer</button></td>
       <td><a type="button" class="btn btn-success" routerLink="/update-agent/{{agt.abmId}}">Modifier</a></td>
-      
+
     </tr>
   </tbody>
 </table>
