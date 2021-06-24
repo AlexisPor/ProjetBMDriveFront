@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlAdh: 'http://localhost:8888/adherent/adhMap',
+  urlAdh: 'http://localhost:8888/adherent/adhMap/',
   urlAdr: 'http://localhost:8888/adresse/adrMap',
 <<<<<<< HEAD
   urlAg: 'http://localhost:8888/agentBM/agMap',
