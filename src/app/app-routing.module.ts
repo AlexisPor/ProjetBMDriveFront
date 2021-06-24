@@ -61,7 +61,7 @@ const routes: Routes = [
 
   {path: "add-suppmedia", component: AddSuppmediaComponent },
   {path: "list-suppmedia", component: ListSuppmediaComponent },
-  {path: "update-suppmedia", component: UpdateSuppmediaComponent },
+  {path: "update-suppmedia/:supId", component: UpdateSuppmediaComponent },
 
   {path: "add-visiteur", component: AddVisiteurComponent },
   {path: "list-visiteur", component: ListVisiteurComponent },

@@ -1,1 +1,47 @@
-<p>update-suppmedia works!</p>
+
+<div class="jumbotron" style="margin-top: 120px;">
+    <div class="col-md-6 offset-md-3">
+        <h3>Modifier un Support Média</h3>
+    <form  >    
+        
+            <div class="form-group"   >
+                <label for="type">Type : </label>
+                <input type="text" class="form-control" [(ngModel)]= "suppMedia.supType" id="type" name="type"  >
+                
+            </div>
+
+            <div class="form-group "  >
+                <label for="titre">Titre : </label>
+                <input type="text" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artTitre" id="titre" name="titre" >
+                
+            </div>
+
+            <div class="form-group" >
+                <label for="auteur">Auteur : </label>
+                <input type="text" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artAuteur" id="auteur" name="auteur" >
+               
+            </div>
+
+            <div class="form-group"  >
+                <label for="artDateEmprunt">Date d'emprunt : </label>
+                <input type="date" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artDateEmprunt" id="artDateEmprunt" name="artDateEmprunt"  >
+               
+            </div>
+
+            <div class="form-group" >
+                <label for="artDateRetour">Date de retour : </label>
+                <input type="date" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artDateRetour" id="artDateRetour" name="artDateRetour" >
+               
+            </div>
+
+            <div class="form-group"  >
+                <label for="artCote">Côte : </label>
+                <input type="text" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artCote" id="artCote" name="artCote"  >
+               
+            </div>
+
+            <button (click)="onSubmit()" class="btn btn-success">Modifier</button>
+        
+    </form>
+    </div>
+</div>

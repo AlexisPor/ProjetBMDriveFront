@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Article } from 'src/app/models/article/article.model';
 import { SuppMedia } from 'src/app/models/suppMedia/suppmedia.model';
+import { ArticleService } from 'src/app/services/article/article.service';
 import { SuppmediaService } from 'src/app/services/suppMedia/suppmedia.service';
 
 @Component({
@@ -12,9 +14,12 @@ export class ListSuppmediaComponent implements OnInit {
 
   supmed : SuppMedia[] = [];
 
+  article : Article;
+
   confirmer = false;
 
   constructor(
+    private articleService : ArticleService,
     private supmediaService : SuppmediaService,
     private router : Router
     ) { }
@@ -38,6 +43,9 @@ deleteSuppMedia(supId : number) {
   })
 }
 
-
+editSuppMedia(supId : number) {
+  this.supmediaService.findSuppMediaById(supId);
+  this.router.navigate(['update-suppmedia',supId]);
+}
 
 }
