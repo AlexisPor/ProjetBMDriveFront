@@ -1,1 +1,26 @@
-<p>update-agentbm works!</p>
+<div class="container">
+    <div>
+        <h1>Modifier un agent </h1>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-3">
+            <label>ID</label>
+            <input readonly type="number" [(ngModel)]="currentAgentBM.abmId" name="abmId" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-3">
+            <label>Nom d'utilisateur :</label>
+            <input type="text" [(ngModel)]="currentAgentBM.abmNomUtilisateur" name="abmNomUtilisateur" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-3">
+            <label>Mot de passe :</label>
+            <input type="text" [(ngModel)]="currentAgentBM.abmMotDePasse" name="abmMotDePasse" class="form-control">
+        </div>
+
+        <div class="mt-2">
+            <button style="background-color: darkorange;" (click)="updateAgentBM()" class="btn btn-btnsuccess">
+            <strong><em>Modifier</em></strong></button>
+        </div>
+    </form>
+</div>

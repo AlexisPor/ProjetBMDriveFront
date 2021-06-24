@@ -19,12 +19,12 @@ export class AgentbmService {
     return this.http.post<Agentbm[]>(environment.urlAg , agent);
   };
 
-  public updateAgentBM(id: number): Observable<Object>{
-    return this.http.put(environment.urlAg , id);
+  public updateAgentBM(agent: Agentbm): Observable<Object>{
+    return this.http.put(environment.urlAg , agent);
   };
 
-  public deleteAgentBM(id: number, agent: Agentbm): Observable<Object>{
-    return this.http.delete(environment.urlAg + id + agent);
+  public deleteAgentBM(abmId: number): Observable<Object>{
+    return this.http.delete(environment.urlAg + abmId );
   };
 
   public findAgentBMById(id: number): Observable<Agentbm>{

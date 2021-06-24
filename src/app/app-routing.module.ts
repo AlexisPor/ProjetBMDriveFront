@@ -37,7 +37,7 @@ const routes: Routes = [
 
   {path: "add-agent", component: AddAgentbmComponent },
   {path: "list-agent", component: ListAgentbmComponent },
-  {path: "update-agent", component: UpdateAgentbmComponent },
+  {path: "update-agent/:abmId", component: UpdateAgentbmComponent },
 
   {path: "add-casier", component: AddCasierComponent },
   {path: "list-casier", component: ListCasierComponent },
