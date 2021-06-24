@@ -12,15 +12,15 @@ export class AgentbmService {
   constructor(private http: HttpClient) { }
 
   public findAllAgentBM(): Observable<Agentbm[]>{
-    return this.http.get<Agentbm[]>(environment.urlAgt);
+    return this.http.get<Agentbm[]>(environment.urlAg);
   };
 
   public addAgentBM(agent: Agentbm): Observable<Agentbm[]>{
-    return this.http.post<Agentbm[]>(environment.urlAgt , agent);
+    return this.http.post<Agentbm[]>(environment.urlAg , agent);
   };
 
   public updateAgentBM(agent: Agentbm): Observable<Object>{
-    return this.http.put(environment.urlAgt , agent);
+    return this.http.put(environment.urlAg , agent);
   };
 
   public deleteAgentBM(abmId: number): Observable<Object>{

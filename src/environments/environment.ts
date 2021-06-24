@@ -7,7 +7,6 @@ export const environment = {
   urlAdh: 'http://localhost:8888/adherent/adhMap',
   urlAdr: 'http://localhost:8888/adresse/adrMap',
   urlAg: 'http://localhost:8888/agentBM/agMap/',
-  urlAgt: 'http://localhost:8888/agentBM/agMap',
   urlArt: 'http://localhost:8888/ar/artMap',
   urlCas: 'http://localhost:8888/casier/casMap',
   urlCat: 'http://localhost:8888/categorie/catMap',
