@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Casier } from 'src/app/models/casier/casier.model';
+import { CasierService } from 'src/app/services/casier/casier.service';
 
 @Component({
   selector: 'app-list-casier',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListCasierComponent implements OnInit {
 
-  constructor() { }
+  casier: Casier[] = [];
+  constructor(private casierService: CasierService) { }
 
   ngOnInit(): void {
+    this.findAllCasier();
   }
 
+  private findAllCasier() {
+    this.casierService.findAllCasier().subscribe(
+      (response) => {
+        this.casier = response;
+      });
+  };
 }
