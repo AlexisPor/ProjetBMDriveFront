@@ -1,8 +1,9 @@
 import { Article } from "../article/article.model";
+import { Categorie } from "../categorie/categorie.model";
 
 export class Livre{
 
-  public libId: number;
+  public livId: number;
   public bmdArticle: Article = new Article();
-  public livNbPages: number;
+  public bmdCategorie: Categorie = new Categorie();
 }
