@@ -10,6 +10,7 @@ import { CasierService } from 'src/app/services/casier/casier.service';
 export class ListCasierComponent implements OnInit {
 
   casier: Casier[] = [];
+
   constructor(private casierService: CasierService) { }
 
   ngOnInit(): void {

@@ -6,8 +6,10 @@ export class Identite {
   public bmdAdresse: Adresse = new Adresse();
   public ideNom: string;
   public idePrenom: string;
-  public ideAge: number;
+  public ideDateNaissance: Date;
   public ideSexe: string;
   public ideTelephone: string;
   public ideMail: string;
+  public ideJustificatifIdentite: string;
+  public ideJustificatifDomicile: string;
 }

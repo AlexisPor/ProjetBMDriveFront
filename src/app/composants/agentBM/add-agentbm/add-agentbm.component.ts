@@ -33,7 +33,7 @@ export class AddAgentbmComponent implements OnInit {
 
     this.agentBMService.addAgentBM(newAgentBM).subscribe(
       (data)=>{
-        this.router.navigate(["list-agentbm"]);
+        this.router.navigate(["list-agent"]);
       });
 
   };

@@ -28,8 +28,6 @@ export class AddSuppmediaComponent implements OnInit {
       type : this.suppmed.supType,
       titre : this.suppmed.bmdArticle.artTitre,
       auteur : this.suppmed.bmdArticle.artAuteur,
-      datedemprunt : this.suppmed.bmdArticle.artDateEmprunt,
-      dateretour : this.suppmed.bmdArticle.artDateRetour,
       cote : this.suppmed.bmdArticle.artCote
     };
 

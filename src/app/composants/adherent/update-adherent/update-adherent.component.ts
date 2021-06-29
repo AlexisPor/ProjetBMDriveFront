@@ -36,7 +36,7 @@ export class UpdateAdherentComponent implements OnInit {
       bmdIdentite: this.fb.group({
         ideNom: [this.adh.bmdIdentite.ideNom],
         idePrenom: [this.adh.bmdIdentite.idePrenom],
-        ideAge: [this.adh.bmdIdentite.ideAge],
+        ideAge: [this.adh.bmdIdentite.ideDateNaissance],
         ideTelephone: [this.adh.bmdIdentite.ideTelephone],
         ideMail: [this.adh.bmdIdentite.ideMail],
         ideSexe: [this.adh.bmdIdentite.ideSexe],
