@@ -9,7 +9,7 @@ export const environment = {
   urlAg: 'http://localhost:8888/agentBM/agMap/',
   urlArt: 'http://localhost:8888/ar/artMap/',
   urlCas: 'http://localhost:8888/casier/casMap/',
-  urlCat: 'http://localhost:8888/categorie/catMap/',
+  urlCat: 'http://localhost:8888/ca/catMap/',
   urlIden: 'http://localhost:8888/identite/ideMap/',
   urlLiv: 'http://localhost:8888/livre/livMap/',
   urlPan: 'http://localhost:8888/panier/panMap/',

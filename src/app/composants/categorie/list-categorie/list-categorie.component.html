@@ -1,1 +1,19 @@
-<p>list-categorie works!</p>
+<div class="jumbotron bg-light">
+    <h1 class="d-block p-3 bg-info text-white " style="margin-top: 80px; text-align: center;">Liste des catégories</h1>
+  <table class="table table-dark table-striped table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Id catégorie</th>
+        <th scope="col">Libellé</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of newCategorie">
+        <td>{{cat.catId}}</td>
+        <td>{{cat.catLibelle}}</td>
+  
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  
