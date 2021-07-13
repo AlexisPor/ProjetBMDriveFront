@@ -1,40 +1,77 @@
 
-<div class="jumbotron" style="margin-top: 120px;">
-    <div class="col-md-6 offset-md-3">
-        <h3>Modifier un Support Média</h3>
-    <form  >
 
-            <div class="col-sm-2 col-md-2 col-lg-3">
-                <label>ID</label>
-                <input readonly type="number" [(ngModel)]= "suppMedia.supId" name="supId" id="supId" class="form-control">
+<div class="col-sm-4 mx-auto " style="margin-top: 90px;"> 
+   
+    <div class="card " id="card" >
+      <div class="card-body" style="background:darkcyan;">
+        <form [formGroup]="mySupMedForm" (ngSubmit)= "onSubmit()" >
+        <div class="card-header"  style="background:deepskyblue">
+            <h2 class="card-title text-center">Modifier un Support Média</h2>
+        </div>
+        <br>
+
+        <div class="form-group ">
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Type</span>
+                </div>           
+                <input type="text" class="form-control " formControlName= "supType" id="type" >
             </div>
+        </div>
 
-            <div class="form-group"   >
-                <label for="type">Type : </label>
-                <input type="text" class="form-control" [(ngModel)]= "suppMedia.supType" id="type" name="type"  >
-
+        <div >
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Thème</span>
+                    </div>            
+                <select id="theme" formControlName="catId" class="form-control" >
+                    <option [value]="cat.catId" *ngFor="let cat of categ" >
+                        {{cat.catLibelle}}
+                    </option>
+                </select>  
+                </div>          
             </div>
+        </div>
 
+        <div formGroupName ='bmdArticle'>            
             <div class="form-group "  >
-                <label for="titre">Titre : </label>
-                <input type="text" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artTitre" id="titre" name="titre" >
-
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Titre</span>
+                    </div> 
+                <input type="text" class="form-control" formControlName= "artTitre" id="titre">
+                </div>
             </div>
-
-            <div class="form-group" >
-                <label for="auteur">Auteur : </label>
-                <input type="text" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artAuteur" id="auteur" name="auteur" >
-
+            <div class="form-group " >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Auteur</span>
+                    </div> 
+                <input type="text" class="form-control" formControlName= "artAuteur" id="auteur">
+                </div>
             </div>
-
-            <div class="form-group"  >
-                <label for="artCote">Côte : </label>
-                <input type="text" class="form-control" [(ngModel)]= "suppMedia.bmdArticle.artCote" id="artCote" name="artCote"  >
-
+            <div class="form-group " >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Quantité</span>
+                    </div> 
+                <input type="number" class="form-control" formControlName= "artQuantite" id="quantite">
+                </div>
             </div>
+            <div class="form-group "  >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Côte</span>
+                    </div> 
+                <input type="text" class="form-control" formControlName= "artCote" id="artCote">
+                </div>
+            </div>
+        </div>
 
-            <button (click)="onSubmit()" class="btn btn-success">Modifier</button>
+            <button type="submit" class="btn btn-success">Modifier</button>
 
     </form>
-    </div>
+        </div>
+   </div>
 </div>

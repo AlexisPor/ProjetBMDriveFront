@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { env } from 'process';
 import { Observable } from 'rxjs';
 import { Livre } from 'src/app/models/livre/livre.model';
 import { environment } from 'src/environments/environment';
@@ -24,11 +23,11 @@ export class LivreService {
     return this.http.put(environment.urlLiv , id);
   };
 
-  public deleteLivre(id: number, liv: Livre): Observable<Object>{
-    return this.http.delete(environment.urlLiv + id + liv);
+  public deleteLivre(id: number): Observable<Object>{
+    return this.http.delete(environment.urlLiv + id );
   };
 
-  public findLivreById(id: number, liv: Livre): Observable<Livre>{
-    return this.http.get<Livre>(environment.urlLiv + id + liv);
+  public findLivreById(id: number): Observable<Livre>{
+    return this.http.get<Livre>(environment.urlLiv + id);
   };
 }
