@@ -49,7 +49,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="bi bi-person-plus"></i></span>
             </div>
-            <input type="text" formControlName="ideAge" class="form-control" placeholder="Age">
+            <input type="date" formControlName="ideDateNaissance" class="form-control" placeholder="Date de naissance">
           </div>
         </div>
 
@@ -58,7 +58,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="bi bi-person-plus"></i></span>
             </div>
-            <input type="text" formControlName="ideTelephone" class="form-control" placeholder="Téléphone">
+            <input type="tel" formControlName="ideTelephone" class="form-control" placeholder="Téléphone">
           </div>
         </div>
 
@@ -78,6 +78,24 @@
           <label class="form-check-label">
             <input type="radio" class="form-check-input" value="F" formControlName="ideSexe" name="ideSexe">Femme
           </label>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="bi bi-person-plus"></i></span>
+            </div>
+            <input type="file" formControlName="ideJustificatifIdentite" class="form-control" placeholder="Mail">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="bi bi-person-plus"></i></span>
+            </div>
+            <input type="file" formControlName="ideJustificatifDomicile" class="form-control" placeholder="Mail">
+          </div>
         </div>
 
 
