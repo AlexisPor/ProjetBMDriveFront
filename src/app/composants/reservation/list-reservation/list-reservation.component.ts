@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Adherent } from 'src/app/models/adherent/adherent.model';
 import { Reservation } from 'src/app/models/reservation/reservation.model';
-import { AdherentService } from 'src/app/services/adherent/adherent.service';
 import { ReservationService } from 'src/app/services/reservation/reservation.service';
 
 @Component({
