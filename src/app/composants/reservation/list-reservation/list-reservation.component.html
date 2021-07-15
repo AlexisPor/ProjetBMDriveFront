@@ -1,1 +1,59 @@
-<p>list-reservation works!</p>
+<h1>Liste de réservations</h1>
+<div class="row">
+  <div class="col-lg-12">
+    <div>
+      <div class="card-header">
+       <h2 class="card-title text-center"><i>Liste de réservations</i></h2>
+      </div>
+      <div class="card-body">
+        <div class="d-flex flex-row-reverse p-0">
+              <form class="form-inline my-5 my-lg-0">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control rounded-pill-left" placeholder="Chercher par nom" id="inputSearch" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-info" type="button" id="btnSearch">Chercher</button>
+                  </div>
+                </div>
+            </form>
+            </div>
+        <table class="table table-dark table-bordered  table-striped table-sm table-responsive{-sm|-md|-lg|-xl|-xxl}" id="tableData">
+          <thead class="text-center">
+            <tr>
+
+      <th scope="col"><i> ID</i></th>
+      <th scope="col"><i>Nom</i></th>
+      <th scope="col"><i>Prénom</i></th>
+      <th scope="col"><i>Téléphone</i></th>
+      <th scope="col"><i>Mail</i></th>
+      <th scope="col" colspan="3"><i>Support média</i></th>
+      <th scope="col" colspan="3"><i>Livre</i></th>
+
+
+    </tr>
+  </thead>
+
+
+  <tbody class="text-center">
+    <tr *ngFor="let res of reservation">
+      <!--Infos de la personne-->
+      <td>{{res.bmdPanier.bmdAdherent.bmdIdentite.ideNom}}</td>
+      <td>{{res.bmdPanier.bmdAdherent.bmdIdentite.idePrenom}}</td>
+      <td>{{res.bmdPanier.bmdAdherent.bmdIdentite.ideTelephone}}</td>
+      <td>{{res.bmdPanier.bmdAdherent.bmdIdentite.ideMail}}</td>
+      <!--Infos du Support média-->
+      <td>{{res.bmdPanier.bmdSupportmedias.bmdArticle.artTitre}}
+          {{res.bmdPanier.bmdSupportmedias.bmdArticle.artAuteur}}
+          {{res.bmdPanier.bmdSupportmedias.bmdArticle.artCote}}
+      </td>
+      <!--Infos du livre-->
+      <td>{{res.bmdPanier.bmdLivres.bmdArticle.artTitre}}
+          {{res.bmdPanier.bmdLivres.bmdArticle.artAuteur}}
+          {{res.bmdPanier.bmdLivres.bmdArticle.artCote}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
