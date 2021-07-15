@@ -1,0 +1,23 @@
+
+
+#container {
+    position: relative;
+    height:auto;
+  }
+  
+  #titre {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    text-transform: uppercase;
+    color: rgba(238, 13, 163, 0.959);
+  }
+  
+  .img-fluid { 
+      
+    width: 100%;
+    height:auto;
+   
+  }
