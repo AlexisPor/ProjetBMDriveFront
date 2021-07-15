@@ -19,8 +19,8 @@ export class LivreService {
     return this.http.post<Livre[]>(environment.urlLiv , liv);
   };
 
-  public updateLivre(id: number): Observable<Object>{
-    return this.http.put(environment.urlLiv , id);
+  public updateLivre(liv: Livre): Observable<Object>{
+    return this.http.put(environment.urlLiv , liv);
   };
 
   public deleteLivre(id: number): Observable<Object>{

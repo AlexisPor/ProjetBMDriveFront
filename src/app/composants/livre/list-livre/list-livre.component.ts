@@ -46,7 +46,7 @@ deleteLivre(livId : number) {
 
 editLivre(livId : number) {
   this.livreService.findLivreById(livId);
-  this.router.navigate(['update-livre',livId]);
+  this.router.navigate(['update-livre', livId]);
 }
 
 
