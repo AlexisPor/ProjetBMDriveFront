@@ -29,10 +29,12 @@ export class AddAdherentComponent implements OnInit {
       bmdIdentite: this.fb.group({
         ideNom: [""],
         idePrenom: [""],
-        ideAge: [""],
+        ideDateNaissance: [""],
         ideTelephone: [""],
         ideMail: [""],
         ideSexe: [""],
+        ideJustificatifDomicile: [""],
+        ideJustificatifIdentite: [""],
           bmdAdresse: this.fb.group({
             adrNumRue: [""],
             adrNomRue: [""],
@@ -57,6 +59,7 @@ export class AddAdherentComponent implements OnInit {
 
     this.adhService.addAdherent(adherent).subscribe(
       (response) => {
+        console.log(response);
         this.route.navigate(["list-adherent"]);
       });
   };

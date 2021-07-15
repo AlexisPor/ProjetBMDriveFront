@@ -1,1 +1,76 @@
-<p>update-livre works!</p>
+
+<div class="col-sm-4 mx-auto " style="margin-top: 90px;"> 
+   
+    <div class="card rounded-lg" id="card" >
+      <div class="card-body" style="background:darkcyan;">
+        <form [formGroup]="myLivreForm" (ngSubmit)= "onSubmit()" >
+        <div class="card-header"  style="background:deepskyblue">
+            <h2 class="card-title text-center">Modifier un Livre</h2>
+        </div>
+        <br>       
+
+        <div class="form-group " >
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Id</span>
+                </div> 
+            <input type="number" readonly class="form-control" formControlName= "livId" id="livId">
+            </div>
+        </div>
+
+        <div >
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Thème</span>
+                    </div>            
+                <select id="theme" formControlName="catId" class="form-control" >
+                    <option [value]="cat.catId" *ngFor="let cat of categ" >
+                        {{cat.catLibelle}}
+                    </option>
+                </select>  
+                </div>          
+            </div>
+        </div>
+
+        <div formGroupName ='bmdArticle'>            
+            <div class="form-group "  >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Titre</span>
+                    </div> 
+                <input type="text" class="form-control" formControlName= "artTitre" id="titre">
+                </div>
+            </div>
+            <div class="form-group " >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Auteur</span>
+                    </div> 
+                <input type="text" class="form-control" formControlName= "artAuteur" id="auteur">
+                </div>
+            </div>
+            <div class="form-group " >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Quantité</span>
+                    </div> 
+                <input type="number" class="form-control" formControlName= "artQuantite" id="quantite">
+                </div>
+            </div>
+            <div class="form-group "  >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Côte</span>
+                    </div> 
+                <input type="text" class="form-control" formControlName= "artCote" id="artCote">
+                </div>
+            </div>
+        </div>
+
+            <button type="submit" class="btn btn-success">Modifier</button>
+
+    </form>
+        </div>
+   </div>
+</div>

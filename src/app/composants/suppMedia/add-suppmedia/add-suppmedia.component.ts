@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Categorie } from 'src/app/models/categorie/categorie.model';
 import { SuppMedia } from 'src/app/models/suppMedia/suppmedia.model';
+import { CategorieService } from 'src/app/services/categorie/categorie.service';
 import { SuppmediaService } from 'src/app/services/suppMedia/suppmedia.service';
 
 @Component({
@@ -10,45 +13,61 @@ import { SuppmediaService } from 'src/app/services/suppMedia/suppmedia.service';
 })
 export class AddSuppmediaComponent implements OnInit {
 
-  suppmed : SuppMedia = new SuppMedia();
+  
 
-  ajouter = false;
+  categ : Categorie[] = [];
+
+  mySupMedForm : FormGroup;
+
 
   constructor(
     private supmediaService : SuppmediaService,
+    private categService : CategorieService,
     private router : Router,
-    private route : ActivatedRoute,
+    private fb : FormBuilder 
   ) { }
 
   ngOnInit(): void {
+    this.getCategorie(); 
+    this.saveSuppMeda();
   }
 
-  saveSuppMeda() : void {
-    const data = {
-      type : this.suppmed.supType,
-      titre : this.suppmed.bmdArticle.artTitre,
-      auteur : this.suppmed.bmdArticle.artAuteur,
-      datedemprunt : this.suppmed.bmdArticle.artDateEmprunt,
-      dateretour : this.suppmed.bmdArticle.artDateRetour,
-      cote : this.suppmed.bmdArticle.artCote
-    };
+  saveSuppMeda() {
+    this.mySupMedForm = this.fb.group({
+      supType : [''],
+     
+        catId : [''],
+     
+      bmdArticle : this.fb.group({
+        artTitre: [''],
+        artAuteur : [''],
+        artCote : [''],
+        artQuantite : ['']
+      }),
+    })
+  }
 
-    console.log("data = "+data);
-    this.supmediaService.addSuppMedia(this.suppmed)
+  getCategorie() {
+    this.categService.findAllCategorie()
     .subscribe(data => {
-      this.ajouter = true;
-      this.goToSuppMediaList();
-    },
-    error => { console.log(error);
+      console.log(data);
+      this.categ = data;
     });
   }
 
-  goToSuppMediaList() {
-    this.router.navigate(['/list-suppmedia']);
-  }
-
   onSubmit() {
-    this.saveSuppMeda();
+    const dataSm = this.mySupMedForm.value;
+    let suppmed : SuppMedia = new SuppMedia();
+    suppmed.supType = dataSm.supType;
+    const bmdCategorie : Categorie = new Categorie();
+    bmdCategorie.catId = dataSm.catId;
+    suppmed.bmdCategorie = bmdCategorie;
+    suppmed.bmdArticle = dataSm.bmdArticle;
+    this.supmediaService.addSuppMedia(suppmed)
+    .subscribe(data => {
+      console.log(data);
+      this.router.navigate(['/list-suppmedia']);
+    })
   }
 
 }

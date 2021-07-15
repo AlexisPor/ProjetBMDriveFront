@@ -19,15 +19,15 @@ export class CategorieService {
     return this.http.post<Categorie[]>(environment.urlCat , cat);
   };
 
-  public updateCategorie(id: number): Observable<Object>{
-    return this.http.put(environment.urlCat , id);
+  public updateCategorie(cat: Categorie): Observable<Object>{
+    return this.http.put(environment.urlCat , cat);
   };
 
-  public deleteCategorie(id: number, cat: Categorie): Observable<Object>{
+  public deleteCategorie(id: number): Observable<Object>{
     return this.http.delete(environment.urlCat + id);
   };
 
-  public findCategorieById(id: number, cat: Categorie): Observable<Categorie>{
-    return this.http.get<Categorie>(environment.urlCat + id + cat);
+  public findCategorieById(id: number): Observable<Categorie>{
+    return this.http.get<Categorie>(environment.urlCat + id);
   };
 }

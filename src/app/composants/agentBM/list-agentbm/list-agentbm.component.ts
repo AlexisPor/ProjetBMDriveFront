@@ -13,10 +13,7 @@ export class ListAgentbmComponent implements OnInit {
 
   agentBM : Agentbm= new Agentbm();
 
-  constructor(private agentBMService : AgentbmService
-    ) {
-
-   }
+  constructor(private agentBMService : AgentbmService) {}
 
   ngOnInit(): void {
     this.findAllAgentBM();
