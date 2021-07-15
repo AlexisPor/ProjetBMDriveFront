@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeAgentComponent } from './composants/accueilAgent/home-agent/home-agent.component';
 import { AddAdherentComponent } from './composants/adherent/add-adherent/add-adherent.component';
 import { ListAdherentComponent } from './composants/adherent/list-adherent/list-adherent.component';
 import { UpdateAdherentComponent } from './composants/adherent/update-adherent/update-adherent.component';
@@ -49,7 +50,7 @@ const routes: Routes = [
 
   {path: "add-livre", component: AddLivreComponent },
   {path: "list-livre", component: ListLivreComponent },
-  {path: "update-livre", component: UpdateLivreComponent },
+  {path: "update-livre/:livId", component: UpdateLivreComponent },
 
   {path: "add-panier", component: AddPanierComponent },
   {path: "list-panier", component: ListPanierComponent },
@@ -66,6 +67,8 @@ const routes: Routes = [
   {path: "add-visiteur", component: AddVisiteurComponent },
   {path: "list-visiteur", component: ListVisiteurComponent },
   {path: "update-visiteur", component: UpdateVisiteurComponent },
+
+  {path: "home-agent", component: HomeAgentComponent},
 
   {path: "menu", component: MenuComponent}
 

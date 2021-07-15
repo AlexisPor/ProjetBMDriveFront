@@ -1,17 +1,15 @@
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" >BM Drive</a>
+    
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top ">
+    <a class="navbar-brand" [routerLink]="['home-agent']" >BMDrive<span class="sr-only">(current)</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['']">Menu <span class="sr-only">(current)</span></a>
-            </li>
-
+        <ul class="navbar-nav mr-auto mx-auto">
+           
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                     Adhérents
@@ -82,6 +80,18 @@
             </li>
 
             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" id="navbardrop" data-toggle="dropdown">
+                Catégorie
+                </a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" [routerLink]="'add-categorie'">Ajouter une catégorie</a>
+                    <a class="dropdown-item" [routerLink]="'list-categorie'">Liste des catégories</a>
+
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" [routerLink]="['list-panier']"  id="navbardrop" data-toggle="dropdown">
                 Panier
                 </a>
@@ -99,34 +109,6 @@
 </nav>
 
 
-<footer >
-    <div  class = " bg-light" >
-        <div  class = " container " >
-          <div  class = " row " >
-              <div class="col">
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item">
-                        <a href="#">A propos</a>
-                    </li>
-                    <li class="list-inline-item">
-                        .
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Vie privée</a>
-                    </li>
-                    <li class="list-inline-item">
-                        .
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Conditions d'utilisations</a>
-                    </li>
-                </ul>
-              </div>
-
-          </div >
-        </div >
-      </div >
-</footer>
 
 
 

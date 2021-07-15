@@ -35,6 +35,7 @@ import { ListVisiteurComponent } from './composants/visiteur/list-visiteur/list-
 import { UpdateVisiteurComponent } from './composants/visiteur/update-visiteur/update-visiteur.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu/menu.component';
+import { HomeAgentComponent } from './composants/accueilAgent/home-agent/home-agent.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { MenuComponent } from './menu/menu/menu.component';
     AddVisiteurComponent,
     ListVisiteurComponent,
     UpdateVisiteurComponent,
-    MenuComponent
+    MenuComponent,
+    HomeAgentComponent
   ],
   imports: [
     BrowserModule,
