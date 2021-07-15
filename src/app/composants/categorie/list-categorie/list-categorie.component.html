@@ -5,13 +5,22 @@
       <tr>
         <th scope="col">Id catégorie</th>
         <th scope="col">Libellé</th>
+        <th colspan="2" scope="col" id="action"><i>Action</i></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let cat of newCategorie">
         <td>{{cat.catId}}</td>
         <td>{{cat.catLibelle}}</td>
-  
+        <td>
+          <button  class = "btn btn-success mr-4 " (click) = "editCategorie(cat.catId)">
+            Modifier
+        </button>
+          
+          <button  class = "btn btn-danger " (click) = "deleteCategorie(cat.catId)">
+              Supprimer
+          </button>
+      </td>
       </tr>
     </tbody>
   </table>
