@@ -22,7 +22,7 @@ export class ListAdherentComponent implements OnInit {
       (response) => {
         this.adherent = response;
       });
-  };
+  }
 
   public onSubmit(id: number) {
     this.adhService.deleteAdherent(id).subscribe(

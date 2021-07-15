@@ -41,7 +41,7 @@ deleteLivre(livId : number) {
   .subscribe(data => {
     console.log(data);
     this.findAllLivre();
-  })
+  });
 }
 
 editLivre(livId : number) {
