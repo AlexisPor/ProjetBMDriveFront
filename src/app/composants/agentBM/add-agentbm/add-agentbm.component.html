@@ -1,23 +1,43 @@
 
-  <div class="jumbotron bg-light" >
-        <form [formGroup]="myFormAgentBM" (ngSubmit)="onSubmit()">
-            <div>
-                <h1>Création d'un agent</h1>
-            </div>
-                <br>
-            <div class="form-group col-md-3">
-                <label for="abmNomUtilisateur">Nom d'utilisateur </label>
-                <input class="form-control" type="text" formControlName="abmNomUtilisateur">
-            </div>
+  <div class="col-sm-4 mx-auto " style="margin-top: 90px;" >
+    <div class="card rounded-lg" id="card" >
+        <div class="card-body" style="background:darkcyan;">
+            <form [formGroup]="myFormAgentBM" (ngSubmit)="onSubmit()">
+                <div class="card-header"  style="background:deepskyblue">
+                    <h2 class="card-title text-center">Création d'un agent</h2>
+                </div>
+                    <br>
+                <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                  </svg>
+                            </span>
+                        </div>
+                            <input class="form-control" type="text" formControlName="abmNomUtilisateur" placeholder="Nom utilisateur">
+                    </div>
+                </div>
             
-            <div class="form-group col-md-3">
-                <label for="abmMotDePasse">Mot de passe : </label>
-                <input class="form-control" type="password" formControlName="abmMotDePasse">
-            </div>
+                <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                    <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </span>
+                        </div>
+                            <input class="form-control" type="password" formControlName="abmMotDePasse" placeholder="Mot de passe" >
+                    </div>
+                </div>
 
-
-    <div><button type="submit" class="btn btn-success">Ajouter</button></div>
-  </form>
-</div>
+                <div><button type="submit" class="btn btn-success">Ajouter</button></div>
+            </form>
+        </div>
+    </div>
+  </div>
 
 
