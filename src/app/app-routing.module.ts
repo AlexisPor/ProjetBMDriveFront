@@ -46,7 +46,7 @@ const routes: Routes = [
 
   {path: "add-categorie", component: AddCategorieComponent },
   {path: "list-categorie", component: ListCategorieComponent },
-  {path: "update-categorie", component: UpdateCategorieComponent },
+  {path: "update-categorie/:catId", component: UpdateCategorieComponent },
 
   {path: "add-livre", component: AddLivreComponent },
   {path: "list-livre", component: ListLivreComponent },

@@ -1,1 +1,28 @@
-<p>add-categorie works!</p>
+
+<div class="col-sm-4 mx-auto " style="margin-top: 90px;"> 
+   
+    <div class="card rounded-lg" id="card" >
+      <div class="card-body" style="background:darkcyan;">
+        <form [formGroup]="myCategorieForm" (ngSubmit)= "onSubmit()" >
+        <div class="card-header"  style="background:deepskyblue">
+            <h2 class="card-title text-center">Ajouter une Catégorie</h2>
+        </div>
+        <br>       
+            
+            <div class="form-group "  >
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Libellé</span>
+                    </div> 
+                <input type="text" class="form-control" formControlName= "catLibelle" id="libelle">
+                </div>
+            </div>                    
+
+            <button type="submit" class="btn btn-success">Ajouter</button>
+
+    </form>
+        </div>
+   </div>
+</div>
+
+

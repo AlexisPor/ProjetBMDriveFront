@@ -64,7 +64,7 @@ export class AddLivreComponent implements OnInit {
     .subscribe(data => {
       console.log(data);
       this.router.navigate(['/list-livre']);
-    })
+    });
   }
 
 }
