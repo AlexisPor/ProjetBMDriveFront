@@ -11,6 +11,8 @@ export class ListAdherentComponent implements OnInit {
 
   adherent: Adherent[] = [];
 
+  ideNom : string;
+
   constructor(private adhService: AdherentService) { }
 
   ngOnInit(): void {
@@ -31,4 +33,12 @@ export class ListAdherentComponent implements OnInit {
         this.findAllAdh();
       });
   };
+
+  public onSearchAdherent() {
+    this.adhService.searchAdherent(this.ideNom)
+    .subscribe(data => {
+      this.adherent = data;
+    });
+  }
+  
 }

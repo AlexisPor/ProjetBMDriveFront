@@ -9,9 +9,9 @@
         <div class="d-flex flex-row-reverse p-0">
               <form class="form-inline my-5 my-lg-0">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control rounded-pill-left" placeholder="Chercher par nom" id="inputSearch" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <input type="text" class="form-control rounded-pill-left" [(ngModel)] = "ideNom"  name="ideNom" placeholder="Chercher par nom" id="inputSearch" aria-label="Recipient's username" aria-describedby="basic-addon2">
                   <div class="input-group-append">
-                    <button class="btn btn-info" type="button" id="btnSearch">Chercher</button>
+                    <button class="btn btn-info" (click)="onSearchAdherent()" id="btnSearch">Chercher</button>
                   </div>
                 </div>
             </form>

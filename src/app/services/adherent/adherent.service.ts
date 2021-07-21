@@ -30,4 +30,8 @@ export class AdherentService {
   public findAdherentById(id: number): Observable<Adherent>{
     return this.http.get<Adherent>(environment.urlAdh + id);
   };
+
+  public searchAdherent(ideNom: string): Observable<Adherent[]>{
+    return this.http.get<Adherent[]>(environment.urlAdh +"search/"+ideNom);
+  };
 }
