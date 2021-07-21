@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Agentbm } from 'src/app/models/agentBM/agentbm.model';
 import { AgentbmService } from 'src/app/services/agentBM/agentbm.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-agentbm',
@@ -13,7 +15,13 @@ export class ListAgentbmComponent implements OnInit {
 
   agentBM : Agentbm= new Agentbm();
 
-  constructor(private agentBMService : AgentbmService) {}
+  page = 1;
+  count = 0;
+  pageSize = 3;
+  pageSizes = [3, 6, 9];
+
+  constructor(private agentBMService : AgentbmService,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.findAllAgentBM();
@@ -37,6 +45,21 @@ export class ListAgentbmComponent implements OnInit {
       this.findAllAgentBM();
     })
 
+  }
+
+  onTableDataChange(event:any){
+    this.page = event;
+    this.findAllAgentBM();
+  }  
+
+  onTableSizeChange(event:any): void {
+    this.pageSize = event.target.value;
+    this.page = 1;
+    this.findAllAgentBM();
+  }  
+
+  ajouter(){
+    alert(this.router.navigate(["add-agent"]));
   }
 
 }
