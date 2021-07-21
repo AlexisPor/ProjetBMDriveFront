@@ -1,4 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -37,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeAgentComponent } from './composants/accueilAgent/home-agent/home-agent.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +70,8 @@ import { HomeAgentComponent } from './composants/accueilAgent/home-agent/home-ag
     ListVisiteurComponent,
     UpdateVisiteurComponent,
     MenuComponent,
-    HomeAgentComponent
+    HomeAgentComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -77,6 +80,7 @@ import { HomeAgentComponent } from './composants/accueilAgent/home-agent/home-ag
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxPaginationModule
 
   ],
   providers: [],
