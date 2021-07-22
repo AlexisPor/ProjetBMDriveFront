@@ -30,4 +30,8 @@ export class ArticleService {
   public findArticleById(id: number): Observable<Article>{
     return this.http.get<Article>(environment.urlArt + id);
   };
+
+  public searchByAuteurOrTitre(artAuteur: string, artTitre: string): Observable<Article[]>{
+    return this.http.get<Article[]>(environment.urlArt+"search/"+artAuteur+artTitre);
+  };
 }
