@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categorie } from 'src/app/models/categorie/categorie.model';
-import { ArticleService } from 'src/app/services/article/article.service';
 import { CategorieService } from 'src/app/services/categorie/categorie.service';
 
 @Component({
@@ -12,14 +11,10 @@ import { CategorieService } from 'src/app/services/categorie/categorie.service';
 export class ListCategorieComponent implements OnInit {
 
   newCategorie : Categorie[];
-  artAuteur: string;
-  artTitre: string;
 
   constructor(
     private categorieService : CategorieService,
-    private router : Router,
-    private art: ArticleService
-    ) { }
+    private router : Router) { }
 
   ngOnInit(): void {
     this.findAllCategorie();
@@ -45,12 +40,5 @@ export class ListCategorieComponent implements OnInit {
     this.categorieService.findCategorieById(catId);
     this.router.navigate(['update-categorie', catId]);
   }
-
-  public searchByAuteurOrTitre() {
-    this.art.searchByAuteurOrTitre(this.artAuteur,this.artTitre ).subscribe(
-      (value) =>{
-
-      }
-    )
-  }
+ 
 }

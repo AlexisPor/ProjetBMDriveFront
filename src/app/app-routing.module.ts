@@ -16,6 +16,7 @@ import { UpdateCategorieComponent } from './composants/categorie/update-categori
 import { AddLivreComponent } from './composants/livre/add-livre/add-livre.component';
 import { ListLivreComponent } from './composants/livre/list-livre/list-livre.component';
 import { UpdateLivreComponent } from './composants/livre/update-livre/update-livre.component';
+import { MenuAdherentComponent } from './composants/menu-adherent/menu-adherent.component';
 import { AddPanierComponent } from './composants/panier/add-panier/add-panier.component';
 import { ListPanierComponent } from './composants/panier/list-panier/list-panier.component';
 import { UpdatePanierComponent } from './composants/panier/update-panier/update-panier.component';
@@ -70,7 +71,9 @@ const routes: Routes = [
 
   {path: "home-agent", component: HomeAgentComponent},
 
-  {path: "menu", component: MenuComponent}
+  {path: "menu", component: MenuComponent},
+
+  {path: "menu-adherent", component: MenuAdherentComponent}
 
 
 

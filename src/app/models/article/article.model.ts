@@ -1,3 +1,6 @@
+import { Livre } from "../livre/livre.model";
+import { SuppMedia } from "../suppMedia/suppmedia.model";
+
 export class Article {
 
   public artId:number;

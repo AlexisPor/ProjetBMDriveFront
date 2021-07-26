@@ -38,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeAgentComponent } from './composants/accueilAgent/home-agent/home-agent.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MenuAdherentComponent } from './composants/menu-adherent/menu-adherent.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     UpdateVisiteurComponent,
     MenuComponent,
     HomeAgentComponent,
+    MenuAdherentComponent,
     
   ],
   imports: [
