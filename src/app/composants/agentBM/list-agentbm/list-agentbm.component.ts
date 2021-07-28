@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import * as $ from 'jquery';
 import { Modal } from 'bootstrap';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-list-agentbm',
@@ -18,6 +19,8 @@ export class ListAgentbmComponent implements OnInit {
   newAgentBM : Agentbm[];
 
   agentBM : Agentbm= new Agentbm();
+
+  nAgentBM : Agentbm=new Agentbm();
 
   page = 1;
   count = 0;
@@ -35,18 +38,22 @@ export class ListAgentbmComponent implements OnInit {
 
   onSubmit(){
     const dataAgentBM=this.myFormAgentBM.value;
-    let newAgentBM : Agentbm=new Agentbm();
-    newAgentBM.abmNomUtilisateur=dataAgentBM.abmNomUtilisateur
-    newAgentBM.abmMotDePasse=dataAgentBM.abmMotDePasse;
-    this.agentBMService.addAgentBM(newAgentBM).subscribe(
-      (data)=>{
-      });
-      $('.modal-content').html('');
-      $('#myModal').on('hidden.bs.modal', function () {
-      window.location.reload(true);
-      });
-      $('#myModal').modal('hide');
-      $('#myModal').modal('dispose');
+    setTimeout(()=>
+    {this.nAgentBM={
+      abmId:dataAgentBM.abmId,
+      abmNomUtilisateur:dataAgentBM.abmNomUtilisateur,
+      abmMotDePasse:dataAgentBM.abmMotDePasse
+    }
+    this.agentBMService.addAgentBM(this.nAgentBM).subscribe(
+      value=>{}
+    )
+    }, 1000);
+      
+
+      setTimeout(()=>
+      {this.findAllAgentBM()},
+      1000
+      )
   };
 
   initFormAgentBM(){
