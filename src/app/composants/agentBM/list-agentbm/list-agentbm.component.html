@@ -5,7 +5,70 @@
 <div class="d-flex bd-highlight">
   <div class="p-2 flex-grow-1 bd-highlight">
     
-      <button (click)="ajouter()" class="btn btn-success">Ajouter un agent</button>
+      
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+  Ajouter un agent
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" show="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Ajouter un agent</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+    <div class="modal-body">
+    <div class="card rounded-lg" id="card" >
+        <div class="card-body" style="background:darkcyan;">
+            <form [formGroup]="myFormAgentBM"  >
+                <div class="card-header"  style="background:deepskyblue">
+                    <h2 class="card-title text-center">Création d'un agent</h2>
+                </div>
+                    <br>
+                <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                  </svg>
+                            </span>
+                        </div>
+                            <input class="form-control" type="text" formControlName="abmNomUtilisateur" placeholder="Nom utilisateur">
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <div class="input-group mb-3 ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                    <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                            </span>
+                        </div>
+                            <input class="form-control" type="password" formControlName="abmMotDePasse" placeholder="Mot de passe" >
+                    </div>
+                </div>
+                  <button type="reset" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn btn-success" (click)="onSubmit()" >Valider</button>   
+            </form>
+        </div>
+    </div>
+  
+     
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
     
   </div>
 

@@ -39,6 +39,8 @@ import { MenuComponent } from './menu/menu/menu.component';
 import { HomeAgentComponent } from './composants/accueilAgent/home-agent/home-agent.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MenuAdherentComponent } from './composants/menu-adherent/menu-adherent.component';
+import * as bootstrap from "bootstrap";
+import * as $ from "jquery";
 
 
 @NgModule({
